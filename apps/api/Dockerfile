@@ -1,22 +1,24 @@
 FROM python:3.12-slim
 
+# Build context must be the REPO ROOT, not apps/api/.
+#   docker build -f apps/api/Dockerfile .
+#   (docker-compose and Render are configured accordingly)
+
 WORKDIR /app
 
-# System dependencies
 RUN apt-get update && apt-get install -y --no-install-recommends \
     curl \
     && rm -rf /var/lib/apt/lists/*
 
-# ── Copy all source BEFORE pip install ──────────────────────────────
-# Hatchling needs pyproject.toml, README.md, and the src/ package
-# at metadata-preparation time.  Copying everything first avoids the
-# "Readme file does not exist" error and ensures the installed wheel
-# contains the real source (no stale stub in site-packages).
-COPY pyproject.toml README.md alembic.ini ./
-COPY src/ src/
-COPY migrations/ migrations/
+# ── Copy API source (paths relative to repo root) ──────────────────
+COPY apps/api/pyproject.toml apps/api/README.md apps/api/alembic.ini ./
+COPY apps/api/src/ src/
+COPY apps/api/migrations/ migrations/
 
-# Install (non-editable) with production extras
+# ── Bake seed knowledge into the image ──────────────────────────────
+COPY packages/knowledge/ packages/knowledge/
+
+# ── Install (non-editable) with production extras ───────────────────
 RUN pip install --no-cache-dir ".[postgres]"
 
 EXPOSE 8000
