@@ -2,7 +2,6 @@
 name = "fishing-expert-api"
 version = "1.0.0"
 description = "Mediterranean Shore Fishing Expert - FastAPI Backend"
-readme = "README.md"
 requires-python = ">=3.12"
 dependencies = [
     "fastapi>=0.109.0",
