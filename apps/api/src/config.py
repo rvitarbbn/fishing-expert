@@ -9,8 +9,9 @@ from pydantic_settings import BaseSettings
 class Settings(BaseSettings):
     """Application settings loaded from environment variables."""
 
-    # Database
-    database_url: str = "postgresql://postgres:postgres@localhost:5432/fishing_expert"
+    # Database — defaults to a local SQLite file so the app starts without Postgres.
+    # Set DATABASE_URL=postgresql://... in .env or env vars for production.
+    database_url: str = "sqlite:///./fishing_expert.db"
 
     # Redis
     redis_url: Optional[str] = None

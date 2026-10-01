@@ -5,7 +5,7 @@ from datetime import datetime
 from fastapi import APIRouter, HTTPException, Query
 
 from src.schemas.forecast import ForecastResponse
-from src.services.forecast import ForecastError, ForecastService
+from src.services.forecast import ForecastError, get_forecast_service
 
 router = APIRouter()
 
@@ -37,7 +37,7 @@ async def get_forecast(
             detail="Invalid datetime format. Use ISO format (e.g., 2026-10-01T18:00:00)",
         )
     
-    service = ForecastService()
+    service = get_forecast_service()
     
     try:
         response = await service.get_forecast(

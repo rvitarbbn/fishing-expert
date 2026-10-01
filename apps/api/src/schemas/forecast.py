@@ -11,7 +11,7 @@ class ForecastRequest(BaseModel):
 
     latitude: float = Field(..., ge=-90, le=90)
     longitude: float = Field(..., ge=-180, le=180)
-    datetime: datetime = Field(..., description="Target date and time")
+    target_datetime: datetime = Field(..., description="Target date and time")
 
 
 class MarineVariables(BaseModel):
