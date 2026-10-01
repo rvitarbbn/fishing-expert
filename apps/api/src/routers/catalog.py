@@ -2,7 +2,14 @@
 
 from fastapi import APIRouter
 
-from src.schemas.catalog import ColorFamily, FishSpecies, Lure, RetrieveMethod
+from src.schemas.catalog import (
+    ColorFamily,
+    FishSpecies,
+    LocationSeed,
+    Lure,
+    RetrieveMethod,
+    SeedStatus,
+)
 from src.services.knowledge import get_knowledge_base
 
 router = APIRouter()
@@ -48,12 +55,12 @@ async def list_lures() -> list[Lure]:
         Lure(
             id=lure_id,
             name_he=data.get("name_he", lure_id),
-            length_cm=tuple(data.get("length_cm", [0, 0])),
-            weight_g=tuple(data.get("weight_g", [0, 0])),
+            length_cm=list(data.get("length_cm", [0, 0])),
+            weight_g=list(data.get("weight_g", [0, 0])),
             layers=data.get("layers", []),
             retrieves=data.get("retrieves", []),
             brand_neutral=data.get("brand_neutral", True),
-            notes_he=data.get("notes_he"),
+            notes_he=data.get("notes_he") or "",
         )
         for lure_id, data in lure_data.items()
     ]
@@ -92,8 +99,8 @@ async def list_colors() -> list[ColorFamily]:
     ]
 
 
-@router.get("/locations")
-async def list_locations() -> list[dict]:
+@router.get("/locations", response_model=list[LocationSeed])
+async def list_locations() -> list[LocationSeed]:
     """
     Return seed location data.
     
@@ -104,20 +111,20 @@ async def list_locations() -> list[dict]:
     location_data = kb.get_all_locations()
     
     return [
-        {
-            "id": loc_id,
-            "name_he": data.get("name_he", loc_id),
-            "structure_profile": data.get("structure_profile"),
-            "coordinates": data.get("coordinates"),
-            "notes": data.get("notes"),
-            "verified": data.get("verified", False),
-        }
+        LocationSeed(
+            id=loc_id,
+            name_he=data.get("name_he", loc_id),
+            structure_profile=data.get("structure_profile", ""),
+            coordinates=data.get("coordinates") or [],
+            notes=data.get("notes", ""),
+            verified=data.get("verified", False),
+        )
         for loc_id, data in location_data.items()
     ]
 
 
-@router.get("/seed-status")
-async def seed_status() -> dict:
+@router.get("/seed-status", response_model=SeedStatus)
+async def seed_status() -> SeedStatus:
     """
     Diagnostic endpoint — shows how much seed data is loaded.
 
@@ -125,4 +132,4 @@ async def seed_status() -> dict:
     ``loaded`` flag that is ``true`` when fish + lures are present.
     """
     kb = get_knowledge_base()
-    return kb.seed_status()
+    return SeedStatus(**kb.seed_status())

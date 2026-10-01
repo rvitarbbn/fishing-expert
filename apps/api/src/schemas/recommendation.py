@@ -3,7 +3,7 @@
 from datetime import datetime
 from typing import Any, Optional
 
-from pydantic import BaseModel, Field, field_validator
+from pydantic import BaseModel, ConfigDict, Field, field_validator
 
 
 class Location(BaseModel):
@@ -98,8 +98,12 @@ class LureRecommendation(BaseModel):
 
     lure_type: str = Field(..., description="Lure type ID")
     lure_name_he: str = Field(..., description="Hebrew name")
-    length_cm_range: tuple[float, float] = Field(..., description="Recommended length range")
-    weight_g_range: tuple[float, float] = Field(..., description="Recommended weight range")
+    length_cm_range: list[float] = Field(
+        ..., min_length=2, max_length=2, description="Recommended length range [min, max] in cm"
+    )
+    weight_g_range: list[float] = Field(
+        ..., min_length=2, max_length=2, description="Recommended weight range [min, max] in grams"
+    )
     recommended_weight_g: float = Field(..., description="Specific recommended weight")
     color_family: str = Field(..., description="Recommended color family")
     working_layer: str = Field(..., description="Target water layer")
@@ -126,6 +130,36 @@ class DataQuality(BaseModel):
     forecast_timestamp: Optional[datetime] = None
     forecast_provider: Optional[str] = None
     data_source: str = Field(..., description="user_supplied, forecast, or mixed")
+
+
+class NormalizedConditions(BaseModel):
+    """Normalized conditions used for recommendation.
+
+    The normalizer may add extra keys depending on what data is available,
+    so we allow additional properties.
+    """
+    model_config = ConfigDict(extra="allow")
+
+    target_fish: str = Field("", description="Normalized target fish ID")
+    time_bucket: str = Field("", description="Time bucket (dawn, day, sunset, night)")
+    sea_state: str = Field("", description="Derived sea state")
+    wind_strength: str = Field("", description="Derived wind strength")
+    structure: Optional[str] = Field(None, description="Structure type")
+
+
+class EquipmentCompatibility(BaseModel):
+    """Equipment compatibility assessment."""
+    model_config = ConfigDict(extra="allow")
+
+    weight_within_range: bool = Field(False, description="Whether weight is within rod range")
+    rod_range_g: list[float] = Field(
+        default_factory=list, description="Rod casting range [min, max]"
+    )
+    lure_range_g: list[float] = Field(
+        default_factory=list, description="Lure weight range [min, max]"
+    )
+    selected_weight_g: Optional[float] = Field(None, description="Selected weight in grams")
+    warnings: list[str] = Field(default_factory=list, description="Compatibility warnings")
 
 
 class RecommendationResponse(BaseModel):

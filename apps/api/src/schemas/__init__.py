@@ -5,13 +5,22 @@ from src.schemas.recommendation import (
     Conditions,
     DataQuality,
     Equipment,
+    EquipmentCompatibility,
     Location,
     LureRecommendation,
+    NormalizedConditions,
     Observations,
     RecommendationRequest,
     RecommendationResponse,
 )
-from src.schemas.catalog import FishSpecies, Lure, RetrieveMethod, ColorFamily
+from src.schemas.catalog import (
+    ColorFamily,
+    FishSpecies,
+    LocationSeed,
+    Lure,
+    RetrieveMethod,
+    SeedStatus,
+)
 from src.schemas.feedback import FeedbackRequest, FeedbackResponse
 from src.schemas.forecast import ForecastRequest, ForecastResponse
 
@@ -25,10 +34,14 @@ __all__ = [
     "Observations",
     "Equipment",
     "DataQuality",
+    "EquipmentCompatibility",
+    "NormalizedConditions",
     "FishSpecies",
     "Lure",
     "RetrieveMethod",
     "ColorFamily",
+    "LocationSeed",
+    "SeedStatus",
     "FeedbackRequest",
     "FeedbackResponse",
     "ForecastRequest",

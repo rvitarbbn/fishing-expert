@@ -26,12 +26,16 @@ class Lure(BaseModel):
 
     id: str = Field(..., description="Unique lure type identifier")
     name_he: str = Field(..., description="Hebrew name")
-    length_cm: tuple[float, float] = Field(..., description="Length range in cm")
-    weight_g: tuple[float, float] = Field(..., description="Weight range in grams")
+    length_cm: list[float] = Field(
+        ..., min_length=2, max_length=2, description="Length range [min, max] in cm"
+    )
+    weight_g: list[float] = Field(
+        ..., min_length=2, max_length=2, description="Weight range [min, max] in grams"
+    )
     layers: list[str] = Field(..., description="Working water layers")
     retrieves: list[str] = Field(..., description="Compatible retrieve methods")
     brand_neutral: bool = Field(True, description="Whether recommendation is brand-neutral")
-    notes_he: Optional[str] = Field(None, description="Notes in Hebrew")
+    notes_he: str = Field("", description="Notes in Hebrew")
 
 
 class RetrieveMethod(BaseModel):
@@ -56,9 +60,11 @@ class LocationSeed(BaseModel):
 
     id: str = Field(..., description="Unique location identifier")
     name_he: str = Field(..., description="Hebrew name")
-    structure_profile: str = Field(..., description="Structure profile type")
-    coordinates: Optional[tuple[float, float]] = Field(None, description="Lat/lon coordinates")
-    notes: str = Field(..., description="Notes about the location")
+    structure_profile: str = Field("", description="Structure profile type")
+    coordinates: list[float] = Field(
+        default_factory=list, min_length=0, max_length=2, description="[lat, lon] coordinates"
+    )
+    notes: str = Field("", description="Notes about the location")
     verified: bool = Field(False, description="Whether location data is verified")
 
 
@@ -69,3 +75,21 @@ class EquipmentClass(BaseModel):
     cast_min_g: float = Field(..., description="Minimum casting weight")
     cast_max_g: float = Field(..., description="Maximum casting weight")
     recommended_working_max_g: float = Field(..., description="Recommended working maximum")
+
+
+class SeedStatus(BaseModel):
+    """Diagnostic status of loaded seed data."""
+
+    fish_count: int = Field(..., description="Number of fish species loaded")
+    lure_count: int = Field(..., description="Number of lure types loaded")
+    seed_rule_count: int = Field(..., description="Number of seed rules loaded")
+    db_rule_count: int = Field(..., description="Number of DB-published rules loaded")
+    total_rule_count: int = Field(..., description="Total rules (seed + DB)")
+    color_count: int = Field(..., description="Number of color families loaded")
+    retrieve_count: int = Field(..., description="Number of retrieve methods loaded")
+    location_count: int = Field(..., description="Number of locations loaded")
+    equipment_class_count: int = Field(..., description="Number of equipment classes loaded")
+    sea_condition_row_count: int = Field(..., description="Number of sea condition rows loaded")
+    rules_version: str = Field(..., description="Rules version string")
+    knowledge_version: str = Field(..., description="Knowledge base version string")
+    loaded: bool = Field(..., description="True when fish + lures are present")

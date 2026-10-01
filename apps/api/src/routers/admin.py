@@ -52,14 +52,51 @@ class RuleResponse(BaseModel):
     id: str
     enabled: bool
     priority: int
-    when_conditions: dict[str, Any]
-    candidate: Optional[str]
+    when_conditions: dict[str, Any] = Field(default_factory=dict, description="Rule conditions")
+    candidate: Optional[str] = None
     score_delta: int
     exclude: bool
     reason_he: str
     status: str
     created_at: datetime
     updated_at: datetime
+
+
+class ValidationResult(BaseModel):
+    """Result of rule validation."""
+    valid: bool = Field(..., description="Whether the rule is valid")
+    errors: list[str] = Field(default_factory=list, description="Validation errors if any")
+    message: str = Field("", description="Success message if valid")
+
+
+class ActionResult(BaseModel):
+    """Result of an admin action (publish, rollback, import)."""
+    message: str = Field(..., description="Result message")
+    imported: int = Field(0, description="Number of rules imported")
+    skipped: int = Field(0, description="Number of rules skipped")
+
+
+class RuleExportItem(BaseModel):
+    """A single exported rule."""
+    id: str
+    enabled: bool
+    priority: int
+    when: dict[str, Any] = Field(default_factory=dict)
+    candidate: Optional[str] = None
+    effect: dict[str, Any] = Field(default_factory=dict)
+    reason_he: str
+
+
+class RuleExport(BaseModel):
+    """Exported rules payload."""
+    version: str = Field(..., description="Export version timestamp")
+    exported_at: str = Field(..., description="Export timestamp in ISO format")
+    rules: list[RuleExportItem] = Field(..., description="Exported rules")
+
+
+class RuleImportPayload(BaseModel):
+    """Payload for importing rules."""
+    rules: list[dict[str, Any]] = Field(..., description="Rules to import")
 
 
 @router.get("/rules", response_model=list[RuleResponse])
@@ -218,11 +255,11 @@ async def update_rule(
     )
 
 
-@router.post("/rules/{rule_id}/validate")
+@router.post("/rules/{rule_id}/validate", response_model=ValidationResult)
 async def validate_rule(
     rule_id: str,
     db: AsyncSession = Depends(get_db),
-) -> dict:
+) -> ValidationResult:
     """
     Validate a rule before publishing.
     
@@ -237,7 +274,7 @@ async def validate_rule(
     if not rule:
         raise HTTPException(status_code=404, detail="Rule not found")
     
-    errors = []
+    errors: list[str] = []
     
     # Validate condition keys
     valid_condition_keys = {
@@ -261,19 +298,19 @@ async def validate_rule(
         errors.append(f"Unknown candidate: {rule.candidate}")
     
     if errors:
-        return {"valid": False, "errors": errors}
+        return ValidationResult(valid=False, errors=errors)
     
     rule.status = RuleStatus.VALIDATED
     await db.commit()
     
-    return {"valid": True, "message": "Rule validated successfully"}
+    return ValidationResult(valid=True, message="Rule validated successfully")
 
 
-@router.post("/rules/{rule_id}/publish")
+@router.post("/rules/{rule_id}/publish", response_model=ActionResult)
 async def publish_rule(
     rule_id: str,
     db: AsyncSession = Depends(get_db),
-) -> dict:
+) -> ActionResult:
     """
     Publish a validated rule to production.
     """
@@ -297,15 +334,15 @@ async def publish_rule(
     await reload_db_rules()
     logger.info("Rule %s published; in-memory rules refreshed", rule_id)
 
-    return {"message": f"Rule {rule_id} published successfully"}
+    return ActionResult(message=f"Rule {rule_id} published successfully")
 
 
-@router.post("/rules/{rule_id}/rollback")
+@router.post("/rules/{rule_id}/rollback", response_model=ActionResult)
 async def rollback_rule(
     rule_id: str,
     version: int = Query(..., description="Version to rollback to"),
     db: AsyncSession = Depends(get_db),
-) -> dict:
+) -> ActionResult:
     """
     Rollback a rule to a previous version.
     """
@@ -343,55 +380,54 @@ async def rollback_rule(
     # A previously-published rule is now draft; refresh engine rules
     await reload_db_rules()
 
-    return {"message": f"Rule {rule_id} rolled back to version {version}"}
+    return ActionResult(message=f"Rule {rule_id} rolled back to version {version}")
 
 
-@router.get("/rules/export")
+@router.get("/rules/export", response_model=RuleExport)
 async def export_rules(
     db: AsyncSession = Depends(get_db),
-) -> dict:
+) -> RuleExport:
     """Export all published rules as JSON."""
     result = await db.execute(
         select(Rule).where(Rule.status == RuleStatus.PUBLISHED)
     )
     rules = result.scalars().all()
     
-    return {
-        "version": datetime.utcnow().strftime("%Y%m%d%H%M%S"),
-        "exported_at": datetime.utcnow().isoformat(),
-        "rules": [
-            {
-                "id": rule.id,
-                "enabled": rule.enabled,
-                "priority": rule.priority,
-                "when": rule.when_conditions,
-                "candidate": rule.candidate,
-                "effect": {
+    return RuleExport(
+        version=datetime.utcnow().strftime("%Y%m%d%H%M%S"),
+        exported_at=datetime.utcnow().isoformat(),
+        rules=[
+            RuleExportItem(
+                id=rule.id,
+                enabled=rule.enabled,
+                priority=rule.priority,
+                when=rule.when_conditions,
+                candidate=rule.candidate,
+                effect={
                     "score_delta": rule.score_delta,
                     "exclude": rule.exclude,
                 },
-                "reason_he": rule.reason_he,
-            }
+                reason_he=rule.reason_he,
+            )
             for rule in rules
         ],
-    }
+    )
 
 
-@router.post("/rules/import")
+@router.post("/rules/import", response_model=ActionResult)
 async def import_rules(
-    rules_data: dict,
+    rules_data: RuleImportPayload,
     db: AsyncSession = Depends(get_db),
-) -> dict:
+) -> ActionResult:
     """
     Import rules from JSON.
     
     Imported rules are created in draft status and require validation.
     """
-    rules = rules_data.get("rules", [])
     imported = 0
     skipped = 0
     
-    for rule_dict in rules:
+    for rule_dict in rules_data.rules:
         rule_id = rule_dict.get("id")
         if not rule_id:
             skipped += 1
@@ -423,8 +459,8 @@ async def import_rules(
     # Refresh engine in case imported rules affect published set
     await reload_db_rules()
 
-    return {
-        "imported": imported,
-        "skipped": skipped,
-        "message": f"Imported {imported} rules, skipped {skipped}",
-    }
+    return ActionResult(
+        imported=imported,
+        skipped=skipped,
+        message=f"Imported {imported} rules, skipped {skipped}",
+    )
