@@ -1,0 +1,230 @@
+{
+  "version": "1.0.0",
+  "lures": [
+    {
+      "id": "minnow",
+      "name_he": "מינו",
+      "length_cm": [
+        7,
+        16
+      ],
+      "weight_g": [
+        7,
+        40
+      ],
+      "layers": [
+        "surface",
+        "shallow",
+        "midwater"
+      ],
+      "retrieves": [
+        "steady",
+        "slow_pause",
+        "twitch_pause"
+      ],
+      "brand_neutral": true,
+      "notes_he": "יש להתאים את המשקל לטווח החכה ולתנאים בפועל."
+    },
+    {
+      "id": "heavy_minnow",
+      "name_he": "מינו כבד",
+      "length_cm": [
+        9,
+        16
+      ],
+      "weight_g": [
+        15,
+        45
+      ],
+      "layers": [
+        "shallow",
+        "midwater"
+      ],
+      "retrieves": [
+        "fast_steady",
+        "twitch_pause"
+      ],
+      "brand_neutral": true,
+      "notes_he": "יש להתאים את המשקל לטווח החכה ולתנאים בפועל."
+    },
+    {
+      "id": "popper",
+      "name_he": "פופר",
+      "length_cm": [
+        8,
+        20
+      ],
+      "weight_g": [
+        15,
+        100
+      ],
+      "layers": [
+        "surface"
+      ],
+      "retrieves": [
+        "pop_pause",
+        "fast_splash"
+      ],
+      "brand_neutral": true,
+      "notes_he": "יש להתאים את המשקל לטווח החכה ולתנאים בפועל."
+    },
+    {
+      "id": "pencil",
+      "name_he": "פנסיל",
+      "length_cm": [
+        8,
+        18
+      ],
+      "weight_g": [
+        10,
+        70
+      ],
+      "layers": [
+        "surface"
+      ],
+      "retrieves": [
+        "walk_the_dog",
+        "skipping"
+      ],
+      "brand_neutral": true,
+      "notes_he": "יש להתאים את המשקל לטווח החכה ולתנאים בפועל."
+    },
+    {
+      "id": "stickbait",
+      "name_he": "סטיקבייט",
+      "length_cm": [
+        10,
+        22
+      ],
+      "weight_g": [
+        25,
+        120
+      ],
+      "layers": [
+        "surface",
+        "shallow"
+      ],
+      "retrieves": [
+        "sweep_pause",
+        "fast_steady"
+      ],
+      "brand_neutral": true,
+      "notes_he": "יש להתאים את המשקל לטווח החכה ולתנאים בפועל."
+    },
+    {
+      "id": "metal_jig",
+      "name_he": "ג׳יג מתכתי",
+      "length_cm": [
+        4,
+        16
+      ],
+      "weight_g": [
+        10,
+        120
+      ],
+      "layers": [
+        "surface",
+        "midwater",
+        "bottom"
+      ],
+      "retrieves": [
+        "fast_steady",
+        "lift_fall",
+        "shore_jig"
+      ],
+      "brand_neutral": true,
+      "notes_he": "יש להתאים את המשקל לטווח החכה ולתנאים בפועל."
+    },
+    {
+      "id": "micro_jig",
+      "name_he": "מיקרו ג׳יג",
+      "length_cm": [
+        3,
+        8
+      ],
+      "weight_g": [
+        5,
+        25
+      ],
+      "layers": [
+        "surface",
+        "midwater",
+        "bottom"
+      ],
+      "retrieves": [
+        "fast_steady",
+        "small_lift_fall"
+      ],
+      "brand_neutral": true,
+      "notes_he": "יש להתאים את המשקל לטווח החכה ולתנאים בפועל."
+    },
+    {
+      "id": "soft_plastic",
+      "name_he": "סיליקון",
+      "length_cm": [
+        7,
+        18
+      ],
+      "weight_g": [
+        5,
+        40
+      ],
+      "layers": [
+        "shallow",
+        "midwater",
+        "bottom"
+      ],
+      "retrieves": [
+        "slow_steady",
+        "bottom_hops",
+        "lift_fall"
+      ],
+      "brand_neutral": true,
+      "notes_he": "יש להתאים את המשקל לטווח החכה ולתנאים בפועל."
+    },
+    {
+      "id": "vibe",
+      "name_he": "וייב",
+      "length_cm": [
+        5,
+        11
+      ],
+      "weight_g": [
+        10,
+        35
+      ],
+      "layers": [
+        "midwater",
+        "bottom"
+      ],
+      "retrieves": [
+        "steady",
+        "lift_fall"
+      ],
+      "brand_neutral": true,
+      "notes_he": "יש להתאים את המשקל לטווח החכה ולתנאים בפועל."
+    },
+    {
+      "id": "blade",
+      "name_he": "בלייד",
+      "length_cm": [
+        4,
+        9
+      ],
+      "weight_g": [
+        8,
+        35
+      ],
+      "layers": [
+        "midwater",
+        "bottom"
+      ],
+      "retrieves": [
+        "steady",
+        "short_lifts"
+      ],
+      "brand_neutral": true,
+      "notes_he": "יש להתאים את המשקל לטווח החכה ולתנאים בפועל."
+    }
+  ]
+}

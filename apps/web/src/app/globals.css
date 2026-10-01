@@ -1,0 +1,55 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    direction: rtl;
+  }
+
+  /* Ensure numeric values remain LTR readable */
+  .ltr-nums {
+    direction: ltr;
+    unicode-bidi: embed;
+  }
+
+  /* Keep model names, PE values, coordinates LTR */
+  .ltr-text {
+    direction: ltr;
+    unicode-bidi: isolate;
+  }
+}
+
+@layer components {
+  .btn-primary {
+    @apply bg-primary-600 hover:bg-primary-700 text-white font-medium py-2 px-4 rounded-lg transition-colors;
+  }
+
+  .btn-secondary {
+    @apply bg-gray-200 hover:bg-gray-300 text-gray-800 font-medium py-2 px-4 rounded-lg transition-colors;
+  }
+
+  .card {
+    @apply bg-white rounded-xl shadow-md p-4 md:p-6;
+  }
+
+  .input-field {
+    @apply w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-transparent;
+  }
+
+  .select-field {
+    @apply w-full px-3 py-2 border border-gray-300 rounded-lg bg-white focus:ring-2 focus:ring-primary-500 focus:border-transparent;
+  }
+
+  .suitability-high {
+    @apply bg-green-100 text-green-800 border-green-300;
+  }
+
+  .suitability-medium {
+    @apply bg-yellow-100 text-yellow-800 border-yellow-300;
+  }
+
+  .suitability-low {
+    @apply bg-red-100 text-red-800 border-red-300;
+  }
+}

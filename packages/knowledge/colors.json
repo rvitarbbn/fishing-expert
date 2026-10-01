@@ -1,0 +1,65 @@
+{
+  "version": "1.0.0",
+  "families": [
+    {
+      "id": "natural_sardine",
+      "name_he": "סרדין טבעי",
+      "best_for": [
+        "clear",
+        "slightly_murky",
+        "bright"
+      ]
+    },
+    {
+      "id": "silver_blue",
+      "name_he": "כסוף־כחול",
+      "best_for": [
+        "clear",
+        "daylight",
+        "bait_school"
+      ]
+    },
+    {
+      "id": "pearl_white",
+      "name_he": "לבן פנינה",
+      "best_for": [
+        "slightly_murky",
+        "foam",
+        "low_light"
+      ]
+    },
+    {
+      "id": "chartreuse",
+      "name_he": "צהוב־ירקרק",
+      "best_for": [
+        "murky",
+        "overcast"
+      ]
+    },
+    {
+      "id": "orange_gold",
+      "name_he": "כתום / זהב",
+      "best_for": [
+        "murky",
+        "sunrise",
+        "sunset"
+      ]
+    },
+    {
+      "id": "pink",
+      "name_he": "ורוד",
+      "best_for": [
+        "murky",
+        "metal_jig"
+      ]
+    },
+    {
+      "id": "black_purple",
+      "name_he": "שחור / סגול כהה",
+      "best_for": [
+        "night",
+        "silhouette"
+      ]
+    }
+  ]
+}

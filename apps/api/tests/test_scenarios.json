@@ -1,0 +1,1166 @@
+{
+  "version": "1.0.0",
+  "scenarios": [
+    {
+      "id": "T001",
+      "input": {
+        "target_fish": "european_seabass",
+        "foam": true,
+        "time_bucket": "sunset",
+        "water_clarity": "slightly_murky",
+        "rod": [
+          10,
+          40
+        ]
+      },
+      "expect_top_any": [
+        "minnow"
+      ],
+      "must_not_exceed_g": 40
+    },
+    {
+      "id": "T002",
+      "input": {
+        "target_fish": "bluefish",
+        "surface_activity": true,
+        "time_bucket": "sunrise",
+        "rod": [
+          20,
+          60
+        ]
+      },
+      "expect_top_any": [
+        "popper",
+        "pencil"
+      ],
+      "must_not_exceed_g": 60
+    },
+    {
+      "id": "T003",
+      "input": {
+        "target_fish": "atlantic_bonito",
+        "activity_distance": "far",
+        "wind_strength": "strong",
+        "rod": [
+          20,
+          60
+        ]
+      },
+      "expect_top_any": [
+        "metal_jig"
+      ],
+      "must_not_exceed_g": 60
+    },
+    {
+      "id": "T004",
+      "input": {
+        "target_fish": "grouper",
+        "structure": "reef",
+        "desired_layer": "bottom",
+        "rod": [
+          20,
+          60
+        ]
+      },
+      "expect_top_any": [
+        "soft_plastic"
+      ],
+      "must_not_exceed_g": 60
+    },
+    {
+      "id": "T005",
+      "input": {
+        "target_fish": "meagre",
+        "structure": "sandy",
+        "time_bucket": "night",
+        "rod": [
+          10,
+          40
+        ]
+      },
+      "expect_top_any": [
+        "soft_plastic",
+        "minnow"
+      ],
+      "must_not_exceed_g": 40
+    },
+    {
+      "id": "T006",
+      "input": {
+        "target_fish": "unknown",
+        "activity_distance": "far",
+        "rod": [
+          10,
+          40
+        ]
+      },
+      "expect_top_any": [
+        "metal_jig"
+      ],
+      "must_not_exceed_g": 40
+    },
+    {
+      "id": "T007",
+      "input": {
+        "target_fish": "greater_amberjack",
+        "desired_layer": "bottom",
+        "rod": [
+          10,
+          40
+        ]
+      },
+      "expect_warning_contains": "equipment",
+      "must_not_exceed_g": 40
+    },
+    {
+      "id": "T008",
+      "input": {
+        "target_fish": "european_seabass",
+        "water_clarity": "murky",
+        "rod": [
+          7,
+          30
+        ]
+      },
+      "expect_top_any": [
+        "vibe",
+        "soft_plastic",
+        "minnow"
+      ],
+      "must_not_exceed_g": 30
+    },
+    {
+      "id": "T009",
+      "input": {
+        "target_fish": "bluefish",
+        "surface_activity": false,
+        "desired_layer": "bottom",
+        "rod": [
+          20,
+          60
+        ]
+      },
+      "expect_not_top": [
+        "popper",
+        "pencil"
+      ],
+      "must_not_exceed_g": 60
+    },
+    {
+      "id": "T010",
+      "input": {
+        "target_fish": "little_tunny",
+        "birds_diving": true,
+        "activity_distance": "far",
+        "rod": [
+          20,
+          60
+        ]
+      },
+      "expect_top_any": [
+        "metal_jig"
+      ],
+      "must_not_exceed_g": 60
+    },
+    {
+      "id": "T011",
+      "input": {
+        "target_fish": "bluefish",
+        "time_bucket": "sunset",
+        "water_clarity": "murky",
+        "foam": true,
+        "rod": [
+          25,
+          100
+        ]
+      },
+      "invariants": [
+        "deterministic",
+        "three_or_fewer_recommendations",
+        "reasons_present",
+        "rules_version_present"
+      ],
+      "must_not_exceed_g": 100
+    },
+    {
+      "id": "T012",
+      "input": {
+        "target_fish": "atlantic_bonito",
+        "time_bucket": "night",
+        "water_clarity": "clear",
+        "foam": false,
+        "rod": [
+          6,
+          25
+        ]
+      },
+      "invariants": [
+        "deterministic",
+        "three_or_fewer_recommendations",
+        "reasons_present",
+        "rules_version_present"
+      ],
+      "must_not_exceed_g": 25
+    },
+    {
+      "id": "T013",
+      "input": {
+        "target_fish": "greater_amberjack",
+        "time_bucket": "sunrise",
+        "water_clarity": "slightly_murky",
+        "foam": true,
+        "rod": [
+          7,
+          30
+        ]
+      },
+      "invariants": [
+        "deterministic",
+        "three_or_fewer_recommendations",
+        "reasons_present",
+        "rules_version_present"
+      ],
+      "must_not_exceed_g": 30
+    },
+    {
+      "id": "T014",
+      "input": {
+        "target_fish": "grouper",
+        "time_bucket": "morning",
+        "water_clarity": "murky",
+        "foam": false,
+        "rod": [
+          10,
+          40
+        ]
+      },
+      "invariants": [
+        "deterministic",
+        "three_or_fewer_recommendations",
+        "reasons_present",
+        "rules_version_present"
+      ],
+      "must_not_exceed_g": 40
+    },
+    {
+      "id": "T015",
+      "input": {
+        "target_fish": "meagre",
+        "time_bucket": "sunset",
+        "water_clarity": "clear",
+        "foam": true,
+        "rod": [
+          15,
+          60
+        ]
+      },
+      "invariants": [
+        "deterministic",
+        "three_or_fewer_recommendations",
+        "reasons_present",
+        "rules_version_present"
+      ],
+      "must_not_exceed_g": 60
+    },
+    {
+      "id": "T016",
+      "input": {
+        "target_fish": "leerfish",
+        "time_bucket": "night",
+        "water_clarity": "slightly_murky",
+        "foam": false,
+        "rod": [
+          20,
+          80
+        ]
+      },
+      "invariants": [
+        "deterministic",
+        "three_or_fewer_recommendations",
+        "reasons_present",
+        "rules_version_present"
+      ],
+      "must_not_exceed_g": 80
+    },
+    {
+      "id": "T017",
+      "input": {
+        "target_fish": "barracuda",
+        "time_bucket": "sunrise",
+        "water_clarity": "murky",
+        "foam": true,
+        "rod": [
+          25,
+          100
+        ]
+      },
+      "invariants": [
+        "deterministic",
+        "three_or_fewer_recommendations",
+        "reasons_present",
+        "rules_version_present"
+      ],
+      "must_not_exceed_g": 100
+    },
+    {
+      "id": "T018",
+      "input": {
+        "target_fish": "little_tunny",
+        "time_bucket": "morning",
+        "water_clarity": "clear",
+        "foam": false,
+        "rod": [
+          6,
+          25
+        ]
+      },
+      "invariants": [
+        "deterministic",
+        "three_or_fewer_recommendations",
+        "reasons_present",
+        "rules_version_present"
+      ],
+      "must_not_exceed_g": 25
+    },
+    {
+      "id": "T019",
+      "input": {
+        "target_fish": "unknown",
+        "time_bucket": "sunset",
+        "water_clarity": "slightly_murky",
+        "foam": true,
+        "rod": [
+          7,
+          30
+        ]
+      },
+      "invariants": [
+        "deterministic",
+        "three_or_fewer_recommendations",
+        "reasons_present",
+        "rules_version_present"
+      ],
+      "must_not_exceed_g": 30
+    },
+    {
+      "id": "T020",
+      "input": {
+        "target_fish": "european_seabass",
+        "time_bucket": "night",
+        "water_clarity": "murky",
+        "foam": false,
+        "rod": [
+          10,
+          40
+        ]
+      },
+      "invariants": [
+        "deterministic",
+        "three_or_fewer_recommendations",
+        "reasons_present",
+        "rules_version_present"
+      ],
+      "must_not_exceed_g": 40
+    },
+    {
+      "id": "T021",
+      "input": {
+        "target_fish": "bluefish",
+        "time_bucket": "sunrise",
+        "water_clarity": "clear",
+        "foam": true,
+        "rod": [
+          15,
+          60
+        ]
+      },
+      "invariants": [
+        "deterministic",
+        "three_or_fewer_recommendations",
+        "reasons_present",
+        "rules_version_present"
+      ],
+      "must_not_exceed_g": 60
+    },
+    {
+      "id": "T022",
+      "input": {
+        "target_fish": "atlantic_bonito",
+        "time_bucket": "morning",
+        "water_clarity": "slightly_murky",
+        "foam": false,
+        "rod": [
+          20,
+          80
+        ]
+      },
+      "invariants": [
+        "deterministic",
+        "three_or_fewer_recommendations",
+        "reasons_present",
+        "rules_version_present"
+      ],
+      "must_not_exceed_g": 80
+    },
+    {
+      "id": "T023",
+      "input": {
+        "target_fish": "greater_amberjack",
+        "time_bucket": "sunset",
+        "water_clarity": "murky",
+        "foam": true,
+        "rod": [
+          25,
+          100
+        ]
+      },
+      "invariants": [
+        "deterministic",
+        "three_or_fewer_recommendations",
+        "reasons_present",
+        "rules_version_present"
+      ],
+      "must_not_exceed_g": 100
+    },
+    {
+      "id": "T024",
+      "input": {
+        "target_fish": "grouper",
+        "time_bucket": "night",
+        "water_clarity": "clear",
+        "foam": false,
+        "rod": [
+          6,
+          25
+        ]
+      },
+      "invariants": [
+        "deterministic",
+        "three_or_fewer_recommendations",
+        "reasons_present",
+        "rules_version_present"
+      ],
+      "must_not_exceed_g": 25
+    },
+    {
+      "id": "T025",
+      "input": {
+        "target_fish": "meagre",
+        "time_bucket": "sunrise",
+        "water_clarity": "slightly_murky",
+        "foam": true,
+        "rod": [
+          7,
+          30
+        ]
+      },
+      "invariants": [
+        "deterministic",
+        "three_or_fewer_recommendations",
+        "reasons_present",
+        "rules_version_present"
+      ],
+      "must_not_exceed_g": 30
+    },
+    {
+      "id": "T026",
+      "input": {
+        "target_fish": "leerfish",
+        "time_bucket": "morning",
+        "water_clarity": "murky",
+        "foam": false,
+        "rod": [
+          10,
+          40
+        ]
+      },
+      "invariants": [
+        "deterministic",
+        "three_or_fewer_recommendations",
+        "reasons_present",
+        "rules_version_present"
+      ],
+      "must_not_exceed_g": 40
+    },
+    {
+      "id": "T027",
+      "input": {
+        "target_fish": "barracuda",
+        "time_bucket": "sunset",
+        "water_clarity": "clear",
+        "foam": true,
+        "rod": [
+          15,
+          60
+        ]
+      },
+      "invariants": [
+        "deterministic",
+        "three_or_fewer_recommendations",
+        "reasons_present",
+        "rules_version_present"
+      ],
+      "must_not_exceed_g": 60
+    },
+    {
+      "id": "T028",
+      "input": {
+        "target_fish": "little_tunny",
+        "time_bucket": "night",
+        "water_clarity": "slightly_murky",
+        "foam": false,
+        "rod": [
+          20,
+          80
+        ]
+      },
+      "invariants": [
+        "deterministic",
+        "three_or_fewer_recommendations",
+        "reasons_present",
+        "rules_version_present"
+      ],
+      "must_not_exceed_g": 80
+    },
+    {
+      "id": "T029",
+      "input": {
+        "target_fish": "unknown",
+        "time_bucket": "sunrise",
+        "water_clarity": "murky",
+        "foam": true,
+        "rod": [
+          25,
+          100
+        ]
+      },
+      "invariants": [
+        "deterministic",
+        "three_or_fewer_recommendations",
+        "reasons_present",
+        "rules_version_present"
+      ],
+      "must_not_exceed_g": 100
+    },
+    {
+      "id": "T030",
+      "input": {
+        "target_fish": "european_seabass",
+        "time_bucket": "morning",
+        "water_clarity": "clear",
+        "foam": false,
+        "rod": [
+          6,
+          25
+        ]
+      },
+      "invariants": [
+        "deterministic",
+        "three_or_fewer_recommendations",
+        "reasons_present",
+        "rules_version_present"
+      ],
+      "must_not_exceed_g": 25
+    },
+    {
+      "id": "T031",
+      "input": {
+        "target_fish": "bluefish",
+        "time_bucket": "sunset",
+        "water_clarity": "slightly_murky",
+        "foam": true,
+        "rod": [
+          7,
+          30
+        ]
+      },
+      "invariants": [
+        "deterministic",
+        "three_or_fewer_recommendations",
+        "reasons_present",
+        "rules_version_present"
+      ],
+      "must_not_exceed_g": 30
+    },
+    {
+      "id": "T032",
+      "input": {
+        "target_fish": "atlantic_bonito",
+        "time_bucket": "night",
+        "water_clarity": "murky",
+        "foam": false,
+        "rod": [
+          10,
+          40
+        ]
+      },
+      "invariants": [
+        "deterministic",
+        "three_or_fewer_recommendations",
+        "reasons_present",
+        "rules_version_present"
+      ],
+      "must_not_exceed_g": 40
+    },
+    {
+      "id": "T033",
+      "input": {
+        "target_fish": "greater_amberjack",
+        "time_bucket": "sunrise",
+        "water_clarity": "clear",
+        "foam": true,
+        "rod": [
+          15,
+          60
+        ]
+      },
+      "invariants": [
+        "deterministic",
+        "three_or_fewer_recommendations",
+        "reasons_present",
+        "rules_version_present"
+      ],
+      "must_not_exceed_g": 60
+    },
+    {
+      "id": "T034",
+      "input": {
+        "target_fish": "grouper",
+        "time_bucket": "morning",
+        "water_clarity": "slightly_murky",
+        "foam": false,
+        "rod": [
+          20,
+          80
+        ]
+      },
+      "invariants": [
+        "deterministic",
+        "three_or_fewer_recommendations",
+        "reasons_present",
+        "rules_version_present"
+      ],
+      "must_not_exceed_g": 80
+    },
+    {
+      "id": "T035",
+      "input": {
+        "target_fish": "meagre",
+        "time_bucket": "sunset",
+        "water_clarity": "murky",
+        "foam": true,
+        "rod": [
+          25,
+          100
+        ]
+      },
+      "invariants": [
+        "deterministic",
+        "three_or_fewer_recommendations",
+        "reasons_present",
+        "rules_version_present"
+      ],
+      "must_not_exceed_g": 100
+    },
+    {
+      "id": "T036",
+      "input": {
+        "target_fish": "leerfish",
+        "time_bucket": "night",
+        "water_clarity": "clear",
+        "foam": false,
+        "rod": [
+          6,
+          25
+        ]
+      },
+      "invariants": [
+        "deterministic",
+        "three_or_fewer_recommendations",
+        "reasons_present",
+        "rules_version_present"
+      ],
+      "must_not_exceed_g": 25
+    },
+    {
+      "id": "T037",
+      "input": {
+        "target_fish": "barracuda",
+        "time_bucket": "sunrise",
+        "water_clarity": "slightly_murky",
+        "foam": true,
+        "rod": [
+          7,
+          30
+        ]
+      },
+      "invariants": [
+        "deterministic",
+        "three_or_fewer_recommendations",
+        "reasons_present",
+        "rules_version_present"
+      ],
+      "must_not_exceed_g": 30
+    },
+    {
+      "id": "T038",
+      "input": {
+        "target_fish": "little_tunny",
+        "time_bucket": "morning",
+        "water_clarity": "murky",
+        "foam": false,
+        "rod": [
+          10,
+          40
+        ]
+      },
+      "invariants": [
+        "deterministic",
+        "three_or_fewer_recommendations",
+        "reasons_present",
+        "rules_version_present"
+      ],
+      "must_not_exceed_g": 40
+    },
+    {
+      "id": "T039",
+      "input": {
+        "target_fish": "unknown",
+        "time_bucket": "sunset",
+        "water_clarity": "clear",
+        "foam": true,
+        "rod": [
+          15,
+          60
+        ]
+      },
+      "invariants": [
+        "deterministic",
+        "three_or_fewer_recommendations",
+        "reasons_present",
+        "rules_version_present"
+      ],
+      "must_not_exceed_g": 60
+    },
+    {
+      "id": "T040",
+      "input": {
+        "target_fish": "european_seabass",
+        "time_bucket": "night",
+        "water_clarity": "slightly_murky",
+        "foam": false,
+        "rod": [
+          20,
+          80
+        ]
+      },
+      "invariants": [
+        "deterministic",
+        "three_or_fewer_recommendations",
+        "reasons_present",
+        "rules_version_present"
+      ],
+      "must_not_exceed_g": 80
+    },
+    {
+      "id": "T041",
+      "input": {
+        "target_fish": "bluefish",
+        "time_bucket": "sunrise",
+        "water_clarity": "murky",
+        "foam": true,
+        "rod": [
+          25,
+          100
+        ]
+      },
+      "invariants": [
+        "deterministic",
+        "three_or_fewer_recommendations",
+        "reasons_present",
+        "rules_version_present"
+      ],
+      "must_not_exceed_g": 100
+    },
+    {
+      "id": "T042",
+      "input": {
+        "target_fish": "atlantic_bonito",
+        "time_bucket": "morning",
+        "water_clarity": "clear",
+        "foam": false,
+        "rod": [
+          6,
+          25
+        ]
+      },
+      "invariants": [
+        "deterministic",
+        "three_or_fewer_recommendations",
+        "reasons_present",
+        "rules_version_present"
+      ],
+      "must_not_exceed_g": 25
+    },
+    {
+      "id": "T043",
+      "input": {
+        "target_fish": "greater_amberjack",
+        "time_bucket": "sunset",
+        "water_clarity": "slightly_murky",
+        "foam": true,
+        "rod": [
+          7,
+          30
+        ]
+      },
+      "invariants": [
+        "deterministic",
+        "three_or_fewer_recommendations",
+        "reasons_present",
+        "rules_version_present"
+      ],
+      "must_not_exceed_g": 30
+    },
+    {
+      "id": "T044",
+      "input": {
+        "target_fish": "grouper",
+        "time_bucket": "night",
+        "water_clarity": "murky",
+        "foam": false,
+        "rod": [
+          10,
+          40
+        ]
+      },
+      "invariants": [
+        "deterministic",
+        "three_or_fewer_recommendations",
+        "reasons_present",
+        "rules_version_present"
+      ],
+      "must_not_exceed_g": 40
+    },
+    {
+      "id": "T045",
+      "input": {
+        "target_fish": "meagre",
+        "time_bucket": "sunrise",
+        "water_clarity": "clear",
+        "foam": true,
+        "rod": [
+          15,
+          60
+        ]
+      },
+      "invariants": [
+        "deterministic",
+        "three_or_fewer_recommendations",
+        "reasons_present",
+        "rules_version_present"
+      ],
+      "must_not_exceed_g": 60
+    },
+    {
+      "id": "T046",
+      "input": {
+        "target_fish": "leerfish",
+        "time_bucket": "morning",
+        "water_clarity": "slightly_murky",
+        "foam": false,
+        "rod": [
+          20,
+          80
+        ]
+      },
+      "invariants": [
+        "deterministic",
+        "three_or_fewer_recommendations",
+        "reasons_present",
+        "rules_version_present"
+      ],
+      "must_not_exceed_g": 80
+    },
+    {
+      "id": "T047",
+      "input": {
+        "target_fish": "barracuda",
+        "time_bucket": "sunset",
+        "water_clarity": "murky",
+        "foam": true,
+        "rod": [
+          25,
+          100
+        ]
+      },
+      "invariants": [
+        "deterministic",
+        "three_or_fewer_recommendations",
+        "reasons_present",
+        "rules_version_present"
+      ],
+      "must_not_exceed_g": 100
+    },
+    {
+      "id": "T048",
+      "input": {
+        "target_fish": "little_tunny",
+        "time_bucket": "night",
+        "water_clarity": "clear",
+        "foam": false,
+        "rod": [
+          6,
+          25
+        ]
+      },
+      "invariants": [
+        "deterministic",
+        "three_or_fewer_recommendations",
+        "reasons_present",
+        "rules_version_present"
+      ],
+      "must_not_exceed_g": 25
+    },
+    {
+      "id": "T049",
+      "input": {
+        "target_fish": "unknown",
+        "time_bucket": "sunrise",
+        "water_clarity": "slightly_murky",
+        "foam": true,
+        "rod": [
+          7,
+          30
+        ]
+      },
+      "invariants": [
+        "deterministic",
+        "three_or_fewer_recommendations",
+        "reasons_present",
+        "rules_version_present"
+      ],
+      "must_not_exceed_g": 30
+    },
+    {
+      "id": "T050",
+      "input": {
+        "target_fish": "european_seabass",
+        "time_bucket": "morning",
+        "water_clarity": "murky",
+        "foam": false,
+        "rod": [
+          10,
+          40
+        ]
+      },
+      "invariants": [
+        "deterministic",
+        "three_or_fewer_recommendations",
+        "reasons_present",
+        "rules_version_present"
+      ],
+      "must_not_exceed_g": 40
+    },
+    {
+      "id": "T051",
+      "input": {
+        "target_fish": "bluefish",
+        "time_bucket": "sunset",
+        "water_clarity": "clear",
+        "foam": true,
+        "rod": [
+          15,
+          60
+        ]
+      },
+      "invariants": [
+        "deterministic",
+        "three_or_fewer_recommendations",
+        "reasons_present",
+        "rules_version_present"
+      ],
+      "must_not_exceed_g": 60
+    },
+    {
+      "id": "T052",
+      "input": {
+        "target_fish": "atlantic_bonito",
+        "time_bucket": "night",
+        "water_clarity": "slightly_murky",
+        "foam": false,
+        "rod": [
+          20,
+          80
+        ]
+      },
+      "invariants": [
+        "deterministic",
+        "three_or_fewer_recommendations",
+        "reasons_present",
+        "rules_version_present"
+      ],
+      "must_not_exceed_g": 80
+    },
+    {
+      "id": "T053",
+      "input": {
+        "target_fish": "greater_amberjack",
+        "time_bucket": "sunrise",
+        "water_clarity": "murky",
+        "foam": true,
+        "rod": [
+          25,
+          100
+        ]
+      },
+      "invariants": [
+        "deterministic",
+        "three_or_fewer_recommendations",
+        "reasons_present",
+        "rules_version_present"
+      ],
+      "must_not_exceed_g": 100
+    },
+    {
+      "id": "T054",
+      "input": {
+        "target_fish": "grouper",
+        "time_bucket": "morning",
+        "water_clarity": "clear",
+        "foam": false,
+        "rod": [
+          6,
+          25
+        ]
+      },
+      "invariants": [
+        "deterministic",
+        "three_or_fewer_recommendations",
+        "reasons_present",
+        "rules_version_present"
+      ],
+      "must_not_exceed_g": 25
+    },
+    {
+      "id": "T055",
+      "input": {
+        "target_fish": "meagre",
+        "time_bucket": "sunset",
+        "water_clarity": "slightly_murky",
+        "foam": true,
+        "rod": [
+          7,
+          30
+        ]
+      },
+      "invariants": [
+        "deterministic",
+        "three_or_fewer_recommendations",
+        "reasons_present",
+        "rules_version_present"
+      ],
+      "must_not_exceed_g": 30
+    },
+    {
+      "id": "T056",
+      "input": {
+        "target_fish": "leerfish",
+        "time_bucket": "night",
+        "water_clarity": "murky",
+        "foam": false,
+        "rod": [
+          10,
+          40
+        ]
+      },
+      "invariants": [
+        "deterministic",
+        "three_or_fewer_recommendations",
+        "reasons_present",
+        "rules_version_present"
+      ],
+      "must_not_exceed_g": 40
+    },
+    {
+      "id": "T057",
+      "input": {
+        "target_fish": "barracuda",
+        "time_bucket": "sunrise",
+        "water_clarity": "clear",
+        "foam": true,
+        "rod": [
+          15,
+          60
+        ]
+      },
+      "invariants": [
+        "deterministic",
+        "three_or_fewer_recommendations",
+        "reasons_present",
+        "rules_version_present"
+      ],
+      "must_not_exceed_g": 60
+    },
+    {
+      "id": "T058",
+      "input": {
+        "target_fish": "little_tunny",
+        "time_bucket": "morning",
+        "water_clarity": "slightly_murky",
+        "foam": false,
+        "rod": [
+          20,
+          80
+        ]
+      },
+      "invariants": [
+        "deterministic",
+        "three_or_fewer_recommendations",
+        "reasons_present",
+        "rules_version_present"
+      ],
+      "must_not_exceed_g": 80
+    },
+    {
+      "id": "T059",
+      "input": {
+        "target_fish": "unknown",
+        "time_bucket": "sunset",
+        "water_clarity": "murky",
+        "foam": true,
+        "rod": [
+          25,
+          100
+        ]
+      },
+      "invariants": [
+        "deterministic",
+        "three_or_fewer_recommendations",
+        "reasons_present",
+        "rules_version_present"
+      ],
+      "must_not_exceed_g": 100
+    },
+    {
+      "id": "T060",
+      "input": {
+        "target_fish": "european_seabass",
+        "time_bucket": "night",
+        "water_clarity": "clear",
+        "foam": false,
+        "rod": [
+          6,
+          25
+        ]
+      },
+      "invariants": [
+        "deterministic",
+        "three_or_fewer_recommendations",
+        "reasons_present",
+        "rules_version_present"
+      ],
+      "must_not_exceed_g": 25
+    }
+  ]
+}

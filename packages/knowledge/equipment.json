@@ -1,0 +1,46 @@
+{
+  "version": "1.0.0",
+  "rod_classes": [
+    {
+      "id": "light_5_25",
+      "cast_min_g": 5,
+      "cast_max_g": 25,
+      "recommended_working_max_g": 22
+    },
+    {
+      "id": "light_7_30",
+      "cast_min_g": 7,
+      "cast_max_g": 30,
+      "recommended_working_max_g": 27
+    },
+    {
+      "id": "medium_10_40",
+      "cast_min_g": 10,
+      "cast_max_g": 40,
+      "recommended_working_max_g": 36
+    },
+    {
+      "id": "medium_heavy_20_60",
+      "cast_min_g": 20,
+      "cast_max_g": 60,
+      "recommended_working_max_g": 55
+    },
+    {
+      "id": "heavy_30_80",
+      "cast_min_g": 30,
+      "cast_max_g": 80,
+      "recommended_working_max_g": 72
+    },
+    {
+      "id": "shore_jig_40_100",
+      "cast_min_g": 40,
+      "cast_max_g": 100,
+      "recommended_working_max_g": 90
+    }
+  ],
+  "compatibility_rules": [
+    "Never exceed manufacturer cast rating.",
+    "Recommended working maximum is a conservative seed, configurable by admin.",
+    "Unknown rod rating means no definitive lure-weight recommendation."
+  ]
+}

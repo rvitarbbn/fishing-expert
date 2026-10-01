@@ -1,0 +1,88 @@
+{
+  "version": "1.0.0",
+  "retrieves": [
+    {
+      "id": "slow_pause",
+      "name_he": "גלגול איטי עם עצירות",
+      "steps_he": [
+        "גלגל לאט 3–6 סיבובים",
+        "עצור 1–3 שניות",
+        "הוסף טוויץ׳ עדין לפי הצורך"
+      ],
+      "use_when": [
+        "seabass",
+        "low_light",
+        "foam"
+      ]
+    },
+    {
+      "id": "twitch_pause",
+      "name_he": "טוויץ׳ ועצירה",
+      "steps_he": [
+        "שני טוויצ׳ים קצרים",
+        "עצירה 1–2 שניות",
+        "חזור בקצב משתנה"
+      ],
+      "use_when": [
+        "minnow",
+        "predator_following"
+      ]
+    },
+    {
+      "id": "pop_pause",
+      "name_he": "פופ ועצירה",
+      "steps_he": [
+        "1–3 משיכות ליצירת התזה",
+        "עצירה 1–4 שניות",
+        "שינוי הקצב לפי תגובות"
+      ],
+      "use_when": [
+        "surface_activity",
+        "bluefish",
+        "amberjack"
+      ]
+    },
+    {
+      "id": "fast_steady",
+      "name_he": "גלגול מהיר רציף",
+      "steps_he": [
+        "הטל מעבר לפעילות",
+        "גלגל מהר תוך שמירת מתח",
+        "שנה מהירות אם אין תגובה"
+      ],
+      "use_when": [
+        "bonito",
+        "little_tunny",
+        "bluefish"
+      ]
+    },
+    {
+      "id": "lift_fall",
+      "name_he": "הרמה ונפילה",
+      "steps_he": [
+        "המתן לשקיעה לעומק הרצוי",
+        "הרם את החכה או בצע הקפצה",
+        "אסוף חוט ושמור מגע בנפילה"
+      ],
+      "use_when": [
+        "metal_jig",
+        "vibe",
+        "bottom"
+      ]
+    },
+    {
+      "id": "bottom_hops",
+      "name_he": "הקפצות קרקעית",
+      "steps_he": [
+        "גע בקרקעית",
+        "בצע 1–2 הקפצות קצרות",
+        "אסוף רפיון וחזור"
+      ],
+      "use_when": [
+        "grouper",
+        "meagre",
+        "soft_plastic"
+      ]
+    }
+  ]
+}

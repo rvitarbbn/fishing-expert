@@ -1,0 +1,1488 @@
+{
+  "version": "1.0.0",
+  "scoring_start": 50,
+  "display_score_cap": [
+    0,
+    100
+  ],
+  "rules": [
+    {
+      "id": "BASE_european_seabass_minnow",
+      "enabled": true,
+      "priority": 50,
+      "when": {
+        "target_fish": "european_seabass"
+      },
+      "candidate": "minnow",
+      "effect": {
+        "score_delta": 25,
+        "exclude": false
+      },
+      "reason_he": "minnow הוא מועמד בסיסי מתאים ל-european_seabass."
+    },
+    {
+      "id": "BASE_european_seabass_soft_plastic",
+      "enabled": true,
+      "priority": 50,
+      "when": {
+        "target_fish": "european_seabass"
+      },
+      "candidate": "soft_plastic",
+      "effect": {
+        "score_delta": 20,
+        "exclude": false
+      },
+      "reason_he": "soft_plastic הוא מועמד בסיסי מתאים ל-european_seabass."
+    },
+    {
+      "id": "BASE_european_seabass_vibe",
+      "enabled": true,
+      "priority": 50,
+      "when": {
+        "target_fish": "european_seabass"
+      },
+      "candidate": "vibe",
+      "effect": {
+        "score_delta": 15,
+        "exclude": false
+      },
+      "reason_he": "vibe הוא מועמד בסיסי מתאים ל-european_seabass."
+    },
+    {
+      "id": "BASE_bluefish_popper",
+      "enabled": true,
+      "priority": 50,
+      "when": {
+        "target_fish": "bluefish"
+      },
+      "candidate": "popper",
+      "effect": {
+        "score_delta": 25,
+        "exclude": false
+      },
+      "reason_he": "popper הוא מועמד בסיסי מתאים ל-bluefish."
+    },
+    {
+      "id": "BASE_bluefish_pencil",
+      "enabled": true,
+      "priority": 50,
+      "when": {
+        "target_fish": "bluefish"
+      },
+      "candidate": "pencil",
+      "effect": {
+        "score_delta": 20,
+        "exclude": false
+      },
+      "reason_he": "pencil הוא מועמד בסיסי מתאים ל-bluefish."
+    },
+    {
+      "id": "BASE_bluefish_metal_jig",
+      "enabled": true,
+      "priority": 50,
+      "when": {
+        "target_fish": "bluefish"
+      },
+      "candidate": "metal_jig",
+      "effect": {
+        "score_delta": 18,
+        "exclude": false
+      },
+      "reason_he": "metal_jig הוא מועמד בסיסי מתאים ל-bluefish."
+    },
+    {
+      "id": "BASE_bluefish_minnow",
+      "enabled": true,
+      "priority": 50,
+      "when": {
+        "target_fish": "bluefish"
+      },
+      "candidate": "minnow",
+      "effect": {
+        "score_delta": 12,
+        "exclude": false
+      },
+      "reason_he": "minnow הוא מועמד בסיסי מתאים ל-bluefish."
+    },
+    {
+      "id": "BASE_bluefish_vibe",
+      "enabled": true,
+      "priority": 50,
+      "when": {
+        "target_fish": "bluefish"
+      },
+      "candidate": "vibe",
+      "effect": {
+        "score_delta": 12,
+        "exclude": false
+      },
+      "reason_he": "vibe הוא מועמד בסיסי מתאים ל-bluefish."
+    },
+    {
+      "id": "BASE_atlantic_bonito_metal_jig",
+      "enabled": true,
+      "priority": 50,
+      "when": {
+        "target_fish": "atlantic_bonito"
+      },
+      "candidate": "metal_jig",
+      "effect": {
+        "score_delta": 28,
+        "exclude": false
+      },
+      "reason_he": "metal_jig הוא מועמד בסיסי מתאים ל-atlantic_bonito."
+    },
+    {
+      "id": "BASE_atlantic_bonito_heavy_minnow",
+      "enabled": true,
+      "priority": 50,
+      "when": {
+        "target_fish": "atlantic_bonito"
+      },
+      "candidate": "heavy_minnow",
+      "effect": {
+        "score_delta": 18,
+        "exclude": false
+      },
+      "reason_he": "heavy_minnow הוא מועמד בסיסי מתאים ל-atlantic_bonito."
+    },
+    {
+      "id": "BASE_atlantic_bonito_pencil",
+      "enabled": true,
+      "priority": 50,
+      "when": {
+        "target_fish": "atlantic_bonito"
+      },
+      "candidate": "pencil",
+      "effect": {
+        "score_delta": 10,
+        "exclude": false
+      },
+      "reason_he": "pencil הוא מועמד בסיסי מתאים ל-atlantic_bonito."
+    },
+    {
+      "id": "BASE_greater_amberjack_stickbait",
+      "enabled": true,
+      "priority": 50,
+      "when": {
+        "target_fish": "greater_amberjack"
+      },
+      "candidate": "stickbait",
+      "effect": {
+        "score_delta": 22,
+        "exclude": false
+      },
+      "reason_he": "stickbait הוא מועמד בסיסי מתאים ל-greater_amberjack."
+    },
+    {
+      "id": "BASE_greater_amberjack_popper",
+      "enabled": true,
+      "priority": 50,
+      "when": {
+        "target_fish": "greater_amberjack"
+      },
+      "candidate": "popper",
+      "effect": {
+        "score_delta": 20,
+        "exclude": false
+      },
+      "reason_he": "popper הוא מועמד בסיסי מתאים ל-greater_amberjack."
+    },
+    {
+      "id": "BASE_greater_amberjack_metal_jig",
+      "enabled": true,
+      "priority": 50,
+      "when": {
+        "target_fish": "greater_amberjack"
+      },
+      "candidate": "metal_jig",
+      "effect": {
+        "score_delta": 26,
+        "exclude": false
+      },
+      "reason_he": "metal_jig הוא מועמד בסיסי מתאים ל-greater_amberjack."
+    },
+    {
+      "id": "BASE_grouper_soft_plastic",
+      "enabled": true,
+      "priority": 50,
+      "when": {
+        "target_fish": "grouper"
+      },
+      "candidate": "soft_plastic",
+      "effect": {
+        "score_delta": 28,
+        "exclude": false
+      },
+      "reason_he": "soft_plastic הוא מועמד בסיסי מתאים ל-grouper."
+    },
+    {
+      "id": "BASE_grouper_metal_jig",
+      "enabled": true,
+      "priority": 50,
+      "when": {
+        "target_fish": "grouper"
+      },
+      "candidate": "metal_jig",
+      "effect": {
+        "score_delta": 15,
+        "exclude": false
+      },
+      "reason_he": "metal_jig הוא מועמד בסיסי מתאים ל-grouper."
+    },
+    {
+      "id": "BASE_meagre_soft_plastic",
+      "enabled": true,
+      "priority": 50,
+      "when": {
+        "target_fish": "meagre"
+      },
+      "candidate": "soft_plastic",
+      "effect": {
+        "score_delta": 25,
+        "exclude": false
+      },
+      "reason_he": "soft_plastic הוא מועמד בסיסי מתאים ל-meagre."
+    },
+    {
+      "id": "BASE_meagre_minnow",
+      "enabled": true,
+      "priority": 50,
+      "when": {
+        "target_fish": "meagre"
+      },
+      "candidate": "minnow",
+      "effect": {
+        "score_delta": 15,
+        "exclude": false
+      },
+      "reason_he": "minnow הוא מועמד בסיסי מתאים ל-meagre."
+    },
+    {
+      "id": "BASE_leerfish_minnow",
+      "enabled": true,
+      "priority": 50,
+      "when": {
+        "target_fish": "leerfish"
+      },
+      "candidate": "minnow",
+      "effect": {
+        "score_delta": 20,
+        "exclude": false
+      },
+      "reason_he": "minnow הוא מועמד בסיסי מתאים ל-leerfish."
+    },
+    {
+      "id": "BASE_leerfish_metal_jig",
+      "enabled": true,
+      "priority": 50,
+      "when": {
+        "target_fish": "leerfish"
+      },
+      "candidate": "metal_jig",
+      "effect": {
+        "score_delta": 18,
+        "exclude": false
+      },
+      "reason_he": "metal_jig הוא מועמד בסיסי מתאים ל-leerfish."
+    },
+    {
+      "id": "BASE_leerfish_pencil",
+      "enabled": true,
+      "priority": 50,
+      "when": {
+        "target_fish": "leerfish"
+      },
+      "candidate": "pencil",
+      "effect": {
+        "score_delta": 15,
+        "exclude": false
+      },
+      "reason_he": "pencil הוא מועמד בסיסי מתאים ל-leerfish."
+    },
+    {
+      "id": "BASE_barracuda_minnow",
+      "enabled": true,
+      "priority": 50,
+      "when": {
+        "target_fish": "barracuda"
+      },
+      "candidate": "minnow",
+      "effect": {
+        "score_delta": 22,
+        "exclude": false
+      },
+      "reason_he": "minnow הוא מועמד בסיסי מתאים ל-barracuda."
+    },
+    {
+      "id": "BASE_barracuda_pencil",
+      "enabled": true,
+      "priority": 50,
+      "when": {
+        "target_fish": "barracuda"
+      },
+      "candidate": "pencil",
+      "effect": {
+        "score_delta": 14,
+        "exclude": false
+      },
+      "reason_he": "pencil הוא מועמד בסיסי מתאים ל-barracuda."
+    },
+    {
+      "id": "BASE_barracuda_metal_jig",
+      "enabled": true,
+      "priority": 50,
+      "when": {
+        "target_fish": "barracuda"
+      },
+      "candidate": "metal_jig",
+      "effect": {
+        "score_delta": 12,
+        "exclude": false
+      },
+      "reason_he": "metal_jig הוא מועמד בסיסי מתאים ל-barracuda."
+    },
+    {
+      "id": "BASE_little_tunny_metal_jig",
+      "enabled": true,
+      "priority": 50,
+      "when": {
+        "target_fish": "little_tunny"
+      },
+      "candidate": "metal_jig",
+      "effect": {
+        "score_delta": 28,
+        "exclude": false
+      },
+      "reason_he": "metal_jig הוא מועמד בסיסי מתאים ל-little_tunny."
+    },
+    {
+      "id": "BASE_little_tunny_heavy_minnow",
+      "enabled": true,
+      "priority": 50,
+      "when": {
+        "target_fish": "little_tunny"
+      },
+      "candidate": "heavy_minnow",
+      "effect": {
+        "score_delta": 16,
+        "exclude": false
+      },
+      "reason_he": "heavy_minnow הוא מועמד בסיסי מתאים ל-little_tunny."
+    },
+    {
+      "id": "BASE_unknown_metal_jig",
+      "enabled": true,
+      "priority": 50,
+      "when": {
+        "target_fish": "unknown"
+      },
+      "candidate": "metal_jig",
+      "effect": {
+        "score_delta": 18,
+        "exclude": false
+      },
+      "reason_he": "metal_jig הוא מועמד בסיסי מתאים ל-unknown."
+    },
+    {
+      "id": "BASE_unknown_minnow",
+      "enabled": true,
+      "priority": 50,
+      "when": {
+        "target_fish": "unknown"
+      },
+      "candidate": "minnow",
+      "effect": {
+        "score_delta": 10,
+        "exclude": false
+      },
+      "reason_he": "minnow הוא מועמד בסיסי מתאים ל-unknown."
+    },
+    {
+      "id": "BASE_unknown_soft_plastic",
+      "enabled": true,
+      "priority": 50,
+      "when": {
+        "target_fish": "unknown"
+      },
+      "candidate": "soft_plastic",
+      "effect": {
+        "score_delta": 8,
+        "exclude": false
+      },
+      "reason_he": "soft_plastic הוא מועמד בסיסי מתאים ל-unknown."
+    },
+    {
+      "id": "COND_001_minnow",
+      "enabled": true,
+      "priority": 40,
+      "when": {
+        "foam": true
+      },
+      "candidate": "minnow",
+      "effect": {
+        "score_delta": 18,
+        "exclude": false
+      },
+      "reason_he": "קצף משפר הסוואה ומעודד עבודה באזור השבירה."
+    },
+    {
+      "id": "COND_002_soft_plastic",
+      "enabled": true,
+      "priority": 40,
+      "when": {
+        "foam": true
+      },
+      "candidate": "soft_plastic",
+      "effect": {
+        "score_delta": 8,
+        "exclude": false
+      },
+      "reason_he": "קצף משפר הסוואה ומעודד עבודה באזור השבירה."
+    },
+    {
+      "id": "COND_003_popper",
+      "enabled": true,
+      "priority": 40,
+      "when": {
+        "foam": true
+      },
+      "candidate": "popper",
+      "effect": {
+        "score_delta": 4,
+        "exclude": false
+      },
+      "reason_he": "קצף משפר הסוואה ומעודד עבודה באזור השבירה."
+    },
+    {
+      "id": "COND_004_vibe",
+      "enabled": true,
+      "priority": 40,
+      "when": {
+        "water_clarity": "murky"
+      },
+      "candidate": "vibe",
+      "effect": {
+        "score_delta": 18,
+        "exclude": false
+      },
+      "reason_he": "במים עכורים עדיפות לרטט, ניגודיות ותנועה ברורה."
+    },
+    {
+      "id": "COND_005_blade",
+      "enabled": true,
+      "priority": 40,
+      "when": {
+        "water_clarity": "murky"
+      },
+      "candidate": "blade",
+      "effect": {
+        "score_delta": 14,
+        "exclude": false
+      },
+      "reason_he": "במים עכורים עדיפות לרטט, ניגודיות ותנועה ברורה."
+    },
+    {
+      "id": "COND_006_soft_plastic",
+      "enabled": true,
+      "priority": 40,
+      "when": {
+        "water_clarity": "murky"
+      },
+      "candidate": "soft_plastic",
+      "effect": {
+        "score_delta": 8,
+        "exclude": false
+      },
+      "reason_he": "במים עכורים עדיפות לרטט, ניגודיות ותנועה ברורה."
+    },
+    {
+      "id": "COND_007_minnow",
+      "enabled": true,
+      "priority": 40,
+      "when": {
+        "water_clarity": "murky"
+      },
+      "candidate": "minnow",
+      "effect": {
+        "score_delta": 4,
+        "exclude": false
+      },
+      "reason_he": "במים עכורים עדיפות לרטט, ניגודיות ותנועה ברורה."
+    },
+    {
+      "id": "COND_008_minnow",
+      "enabled": true,
+      "priority": 40,
+      "when": {
+        "water_clarity": "clear"
+      },
+      "candidate": "minnow",
+      "effect": {
+        "score_delta": 8,
+        "exclude": false
+      },
+      "reason_he": "במים צלולים יש יתרון להצגה טבעית."
+    },
+    {
+      "id": "COND_009_heavy_minnow",
+      "enabled": true,
+      "priority": 40,
+      "when": {
+        "water_clarity": "clear"
+      },
+      "candidate": "heavy_minnow",
+      "effect": {
+        "score_delta": 6,
+        "exclude": false
+      },
+      "reason_he": "במים צלולים יש יתרון להצגה טבעית."
+    },
+    {
+      "id": "COND_010_soft_plastic",
+      "enabled": true,
+      "priority": 40,
+      "when": {
+        "water_clarity": "clear"
+      },
+      "candidate": "soft_plastic",
+      "effect": {
+        "score_delta": 4,
+        "exclude": false
+      },
+      "reason_he": "במים צלולים יש יתרון להצגה טבעית."
+    },
+    {
+      "id": "COND_011_popper",
+      "enabled": true,
+      "priority": 40,
+      "when": {
+        "surface_activity": true
+      },
+      "candidate": "popper",
+      "effect": {
+        "score_delta": 24,
+        "exclude": false
+      },
+      "reason_he": "פעילות בפני המים מחזקת דמויי טופ־ווטר."
+    },
+    {
+      "id": "COND_012_pencil",
+      "enabled": true,
+      "priority": 40,
+      "when": {
+        "surface_activity": true
+      },
+      "candidate": "pencil",
+      "effect": {
+        "score_delta": 22,
+        "exclude": false
+      },
+      "reason_he": "פעילות בפני המים מחזקת דמויי טופ־ווטר."
+    },
+    {
+      "id": "COND_013_stickbait",
+      "enabled": true,
+      "priority": 40,
+      "when": {
+        "surface_activity": true
+      },
+      "candidate": "stickbait",
+      "effect": {
+        "score_delta": 20,
+        "exclude": false
+      },
+      "reason_he": "פעילות בפני המים מחזקת דמויי טופ־ווטר."
+    },
+    {
+      "id": "COND_014_metal_jig",
+      "enabled": true,
+      "priority": 40,
+      "when": {
+        "surface_activity": true
+      },
+      "candidate": "metal_jig",
+      "effect": {
+        "score_delta": 8,
+        "exclude": false
+      },
+      "reason_he": "פעילות בפני המים מחזקת דמויי טופ־ווטר."
+    },
+    {
+      "id": "COND_015_metal_jig",
+      "enabled": true,
+      "priority": 40,
+      "when": {
+        "birds_diving": true
+      },
+      "candidate": "metal_jig",
+      "effect": {
+        "score_delta": 20,
+        "exclude": false
+      },
+      "reason_he": "ציפורים צוללות עשויות להצביע על דגי פיתיון פעילים."
+    },
+    {
+      "id": "COND_016_heavy_minnow",
+      "enabled": true,
+      "priority": 40,
+      "when": {
+        "birds_diving": true
+      },
+      "candidate": "heavy_minnow",
+      "effect": {
+        "score_delta": 12,
+        "exclude": false
+      },
+      "reason_he": "ציפורים צוללות עשויות להצביע על דגי פיתיון פעילים."
+    },
+    {
+      "id": "COND_017_pencil",
+      "enabled": true,
+      "priority": 40,
+      "when": {
+        "birds_diving": true
+      },
+      "candidate": "pencil",
+      "effect": {
+        "score_delta": 10,
+        "exclude": false
+      },
+      "reason_he": "ציפורים צוללות עשויות להצביע על דגי פיתיון פעילים."
+    },
+    {
+      "id": "COND_018_metal_jig",
+      "enabled": true,
+      "priority": 40,
+      "when": {
+        "wind_strength": "strong"
+      },
+      "candidate": "metal_jig",
+      "effect": {
+        "score_delta": 18,
+        "exclude": false
+      },
+      "reason_he": "ברוח חזקה עדיפות לדמויים אווירודינמיים וכבדים יותר."
+    },
+    {
+      "id": "COND_019_vibe",
+      "enabled": true,
+      "priority": 40,
+      "when": {
+        "wind_strength": "strong"
+      },
+      "candidate": "vibe",
+      "effect": {
+        "score_delta": 10,
+        "exclude": false
+      },
+      "reason_he": "ברוח חזקה עדיפות לדמויים אווירודינמיים וכבדים יותר."
+    },
+    {
+      "id": "COND_020_heavy_minnow",
+      "enabled": true,
+      "priority": 40,
+      "when": {
+        "wind_strength": "strong"
+      },
+      "candidate": "heavy_minnow",
+      "effect": {
+        "score_delta": 10,
+        "exclude": false
+      },
+      "reason_he": "ברוח חזקה עדיפות לדמויים אווירודינמיים וכבדים יותר."
+    },
+    {
+      "id": "COND_021_popper",
+      "enabled": true,
+      "priority": 40,
+      "when": {
+        "wind_strength": "strong"
+      },
+      "candidate": "popper",
+      "effect": {
+        "score_delta": -8,
+        "exclude": false
+      },
+      "reason_he": "ברוח חזקה עדיפות לדמויים אווירודינמיים וכבדים יותר."
+    },
+    {
+      "id": "COND_022_metal_jig",
+      "enabled": true,
+      "priority": 40,
+      "when": {
+        "current_strength": "strong"
+      },
+      "candidate": "metal_jig",
+      "effect": {
+        "score_delta": 18,
+        "exclude": false
+      },
+      "reason_he": "זרם חזק דורש שליטה טובה יותר בעומק."
+    },
+    {
+      "id": "COND_023_vibe",
+      "enabled": true,
+      "priority": 40,
+      "when": {
+        "current_strength": "strong"
+      },
+      "candidate": "vibe",
+      "effect": {
+        "score_delta": 10,
+        "exclude": false
+      },
+      "reason_he": "זרם חזק דורש שליטה טובה יותר בעומק."
+    },
+    {
+      "id": "COND_024_soft_plastic",
+      "enabled": true,
+      "priority": 40,
+      "when": {
+        "current_strength": "strong"
+      },
+      "candidate": "soft_plastic",
+      "effect": {
+        "score_delta": 5,
+        "exclude": false
+      },
+      "reason_he": "זרם חזק דורש שליטה טובה יותר בעומק."
+    },
+    {
+      "id": "COND_025_soft_plastic",
+      "enabled": true,
+      "priority": 40,
+      "when": {
+        "structure": "reef"
+      },
+      "candidate": "soft_plastic",
+      "effect": {
+        "score_delta": 16,
+        "exclude": false
+      },
+      "reason_he": "ריף מעניק יתרון לעבודה מבוקרת סביב מבנה."
+    },
+    {
+      "id": "COND_026_metal_jig",
+      "enabled": true,
+      "priority": 40,
+      "when": {
+        "structure": "reef"
+      },
+      "candidate": "metal_jig",
+      "effect": {
+        "score_delta": 5,
+        "exclude": false
+      },
+      "reason_he": "ריף מעניק יתרון לעבודה מבוקרת סביב מבנה."
+    },
+    {
+      "id": "COND_027_popper",
+      "enabled": true,
+      "priority": 40,
+      "when": {
+        "structure": "reef"
+      },
+      "candidate": "popper",
+      "effect": {
+        "score_delta": 4,
+        "exclude": false
+      },
+      "reason_he": "ריף מעניק יתרון לעבודה מבוקרת סביב מבנה."
+    },
+    {
+      "id": "COND_028_minnow",
+      "enabled": true,
+      "priority": 40,
+      "when": {
+        "structure": "sandy"
+      },
+      "candidate": "minnow",
+      "effect": {
+        "score_delta": 10,
+        "exclude": false
+      },
+      "reason_he": "חוף חולי מתאים לסריקה ולהצגה לאורך תעלות ושבירות."
+    },
+    {
+      "id": "COND_029_soft_plastic",
+      "enabled": true,
+      "priority": 40,
+      "when": {
+        "structure": "sandy"
+      },
+      "candidate": "soft_plastic",
+      "effect": {
+        "score_delta": 10,
+        "exclude": false
+      },
+      "reason_he": "חוף חולי מתאים לסריקה ולהצגה לאורך תעלות ושבירות."
+    },
+    {
+      "id": "COND_030_metal_jig",
+      "enabled": true,
+      "priority": 40,
+      "when": {
+        "structure": "sandy"
+      },
+      "candidate": "metal_jig",
+      "effect": {
+        "score_delta": 6,
+        "exclude": false
+      },
+      "reason_he": "חוף חולי מתאים לסריקה ולהצגה לאורך תעלות ושבירות."
+    },
+    {
+      "id": "COND_031_minnow",
+      "enabled": true,
+      "priority": 40,
+      "when": {
+        "time_bucket": "night"
+      },
+      "candidate": "minnow",
+      "effect": {
+        "score_delta": 12,
+        "exclude": false
+      },
+      "reason_he": "בלילה הצגה איטית וצללית ברורה מקבלות עדיפות."
+    },
+    {
+      "id": "COND_032_soft_plastic",
+      "enabled": true,
+      "priority": 40,
+      "when": {
+        "time_bucket": "night"
+      },
+      "candidate": "soft_plastic",
+      "effect": {
+        "score_delta": 10,
+        "exclude": false
+      },
+      "reason_he": "בלילה הצגה איטית וצללית ברורה מקבלות עדיפות."
+    },
+    {
+      "id": "COND_033_vibe",
+      "enabled": true,
+      "priority": 40,
+      "when": {
+        "time_bucket": "night"
+      },
+      "candidate": "vibe",
+      "effect": {
+        "score_delta": 5,
+        "exclude": false
+      },
+      "reason_he": "בלילה הצגה איטית וצללית ברורה מקבלות עדיפות."
+    },
+    {
+      "id": "COND_034_metal_jig",
+      "enabled": true,
+      "priority": 40,
+      "when": {
+        "time_bucket": "night"
+      },
+      "candidate": "metal_jig",
+      "effect": {
+        "score_delta": -6,
+        "exclude": false
+      },
+      "reason_he": "בלילה הצגה איטית וצללית ברורה מקבלות עדיפות."
+    },
+    {
+      "id": "COND_035_popper",
+      "enabled": true,
+      "priority": 40,
+      "when": {
+        "time_bucket": "sunrise"
+      },
+      "candidate": "popper",
+      "effect": {
+        "score_delta": 10,
+        "exclude": false
+      },
+      "reason_he": "זריחה היא חלון מתאים לבדיקת פני המים והשכבה העליונה."
+    },
+    {
+      "id": "COND_036_minnow",
+      "enabled": true,
+      "priority": 40,
+      "when": {
+        "time_bucket": "sunrise"
+      },
+      "candidate": "minnow",
+      "effect": {
+        "score_delta": 10,
+        "exclude": false
+      },
+      "reason_he": "זריחה היא חלון מתאים לבדיקת פני המים והשכבה העליונה."
+    },
+    {
+      "id": "COND_037_metal_jig",
+      "enabled": true,
+      "priority": 40,
+      "when": {
+        "time_bucket": "sunrise"
+      },
+      "candidate": "metal_jig",
+      "effect": {
+        "score_delta": 8,
+        "exclude": false
+      },
+      "reason_he": "זריחה היא חלון מתאים לבדיקת פני המים והשכבה העליונה."
+    },
+    {
+      "id": "COND_038_popper",
+      "enabled": true,
+      "priority": 40,
+      "when": {
+        "time_bucket": "sunset"
+      },
+      "candidate": "popper",
+      "effect": {
+        "score_delta": 10,
+        "exclude": false
+      },
+      "reason_he": "שקיעה מחזקת דמויי מינו וטופ־ווטר בהתאם לפעילות."
+    },
+    {
+      "id": "COND_039_minnow",
+      "enabled": true,
+      "priority": 40,
+      "when": {
+        "time_bucket": "sunset"
+      },
+      "candidate": "minnow",
+      "effect": {
+        "score_delta": 12,
+        "exclude": false
+      },
+      "reason_he": "שקיעה מחזקת דמויי מינו וטופ־ווטר בהתאם לפעילות."
+    },
+    {
+      "id": "COND_040_soft_plastic",
+      "enabled": true,
+      "priority": 40,
+      "when": {
+        "time_bucket": "sunset"
+      },
+      "candidate": "soft_plastic",
+      "effect": {
+        "score_delta": 6,
+        "exclude": false
+      },
+      "reason_he": "שקיעה מחזקת דמויי מינו וטופ־ווטר בהתאם לפעילות."
+    },
+    {
+      "id": "COND_041_metal_jig",
+      "enabled": true,
+      "priority": 40,
+      "when": {
+        "activity_distance": "far"
+      },
+      "candidate": "metal_jig",
+      "effect": {
+        "score_delta": 22,
+        "exclude": false
+      },
+      "reason_he": "פעילות רחוקה דורשת יכולת הטלה משמעותית."
+    },
+    {
+      "id": "COND_042_heavy_minnow",
+      "enabled": true,
+      "priority": 40,
+      "when": {
+        "activity_distance": "far"
+      },
+      "candidate": "heavy_minnow",
+      "effect": {
+        "score_delta": 12,
+        "exclude": false
+      },
+      "reason_he": "פעילות רחוקה דורשת יכולת הטלה משמעותית."
+    },
+    {
+      "id": "COND_043_soft_plastic",
+      "enabled": true,
+      "priority": 40,
+      "when": {
+        "activity_distance": "far"
+      },
+      "candidate": "soft_plastic",
+      "effect": {
+        "score_delta": -8,
+        "exclude": false
+      },
+      "reason_he": "פעילות רחוקה דורשת יכולת הטלה משמעותית."
+    },
+    {
+      "id": "COND_044_soft_plastic",
+      "enabled": true,
+      "priority": 40,
+      "when": {
+        "desired_layer": "bottom"
+      },
+      "candidate": "soft_plastic",
+      "effect": {
+        "score_delta": 20,
+        "exclude": false
+      },
+      "reason_he": "יעד סמוך לקרקעית מחזק דמויים שוקעים ופוסל כמעט לחלוטין טופ־ווטר."
+    },
+    {
+      "id": "COND_045_metal_jig",
+      "enabled": true,
+      "priority": 40,
+      "when": {
+        "desired_layer": "bottom"
+      },
+      "candidate": "metal_jig",
+      "effect": {
+        "score_delta": 12,
+        "exclude": false
+      },
+      "reason_he": "יעד סמוך לקרקעית מחזק דמויים שוקעים ופוסל כמעט לחלוטין טופ־ווטר."
+    },
+    {
+      "id": "COND_046_vibe",
+      "enabled": true,
+      "priority": 40,
+      "when": {
+        "desired_layer": "bottom"
+      },
+      "candidate": "vibe",
+      "effect": {
+        "score_delta": 10,
+        "exclude": false
+      },
+      "reason_he": "יעד סמוך לקרקעית מחזק דמויים שוקעים ופוסל כמעט לחלוטין טופ־ווטר."
+    },
+    {
+      "id": "COND_047_popper",
+      "enabled": true,
+      "priority": 40,
+      "when": {
+        "desired_layer": "bottom"
+      },
+      "candidate": "popper",
+      "effect": {
+        "score_delta": -25,
+        "exclude": false
+      },
+      "reason_he": "יעד סמוך לקרקעית מחזק דמויים שוקעים ופוסל כמעט לחלוטין טופ־ווטר."
+    },
+    {
+      "id": "COND_048_pencil",
+      "enabled": true,
+      "priority": 40,
+      "when": {
+        "desired_layer": "bottom"
+      },
+      "candidate": "pencil",
+      "effect": {
+        "score_delta": -22,
+        "exclude": false
+      },
+      "reason_he": "יעד סמוך לקרקעית מחזק דמויים שוקעים ופוסל כמעט לחלוטין טופ־ווטר."
+    },
+    {
+      "id": "SPECIAL_001",
+      "enabled": true,
+      "priority": 60,
+      "when": {
+        "target_fish": "european_seabass",
+        "foam": true
+      },
+      "candidate": "minnow",
+      "effect": {
+        "score_delta": 15,
+        "exclude": false
+      },
+      "reason_he": "לברק וקצף הם שילוב חזק למינו."
+    },
+    {
+      "id": "SPECIAL_002",
+      "enabled": true,
+      "priority": 60,
+      "when": {
+        "target_fish": "european_seabass",
+        "time_bucket": "night"
+      },
+      "candidate": "minnow",
+      "effect": {
+        "score_delta": 10,
+        "exclude": false
+      },
+      "reason_he": "לברק בלילה מתאים למינו איטי בצללית ברורה."
+    },
+    {
+      "id": "SPECIAL_003",
+      "enabled": true,
+      "priority": 60,
+      "when": {
+        "target_fish": "bluefish",
+        "surface_activity": true
+      },
+      "candidate": "popper",
+      "effect": {
+        "score_delta": 18,
+        "exclude": false
+      },
+      "reason_he": "גומבר פעיל בפני המים מתאים לפופר."
+    },
+    {
+      "id": "SPECIAL_004",
+      "enabled": true,
+      "priority": 60,
+      "when": {
+        "target_fish": "atlantic_bonito",
+        "activity_distance": "far"
+      },
+      "candidate": "metal_jig",
+      "effect": {
+        "score_delta": 20,
+        "exclude": false
+      },
+      "reason_he": "פלמידה רחוקה מחזקת ג׳יג מתכתי."
+    },
+    {
+      "id": "SPECIAL_005",
+      "enabled": true,
+      "priority": 60,
+      "when": {
+        "target_fish": "greater_amberjack",
+        "desired_layer": "bottom"
+      },
+      "candidate": "metal_jig",
+      "effect": {
+        "score_delta": 16,
+        "exclude": false
+      },
+      "reason_he": "אינטיאס בעומק מחזק ג׳יג כבד."
+    },
+    {
+      "id": "SPECIAL_006",
+      "enabled": true,
+      "priority": 60,
+      "when": {
+        "target_fish": "grouper",
+        "structure": "reef"
+      },
+      "candidate": "soft_plastic",
+      "effect": {
+        "score_delta": 20,
+        "exclude": false
+      },
+      "reason_he": "לוקוס בריף מתאים לסיליקון סמוך לקרקעית."
+    },
+    {
+      "id": "SPECIAL_007",
+      "enabled": true,
+      "priority": 60,
+      "when": {
+        "target_fish": "meagre",
+        "structure": "sandy"
+      },
+      "candidate": "soft_plastic",
+      "effect": {
+        "score_delta": 16,
+        "exclude": false
+      },
+      "reason_he": "מוסר בחוף חולי מתאים לעבודה איטית בסיליקון."
+    },
+    {
+      "id": "SPECIAL_008",
+      "enabled": true,
+      "priority": 60,
+      "when": {
+        "target_fish": "little_tunny",
+        "birds_diving": true
+      },
+      "candidate": "metal_jig",
+      "effect": {
+        "score_delta": 20,
+        "exclude": false
+      },
+      "reason_he": "טונית עם ציפורים ודגי פיתיון מחזקת ג׳יג מהיר."
+    },
+    {
+      "id": "HARD_WEIGHT_01",
+      "enabled": true,
+      "priority": 100,
+      "when": {
+        "candidate_weight_above_rod_max": true
+      },
+      "candidate": "minnow",
+      "effect": {
+        "score_delta": 0,
+        "exclude": true
+      },
+      "reason_he": "משקל הדמוי חורג ממשקל ההטלה המרבי של החכה."
+    },
+    {
+      "id": "HARD_BELOW_01",
+      "enabled": true,
+      "priority": 95,
+      "when": {
+        "candidate_weight_below_rod_min_materially": true
+      },
+      "candidate": "minnow",
+      "effect": {
+        "score_delta": 0,
+        "exclude": true
+      },
+      "reason_he": "משקל הדמוי נמוך משמעותית מטווח העבודה של החכה."
+    },
+    {
+      "id": "HARD_WEIGHT_02",
+      "enabled": true,
+      "priority": 100,
+      "when": {
+        "candidate_weight_above_rod_max": true
+      },
+      "candidate": "heavy_minnow",
+      "effect": {
+        "score_delta": 0,
+        "exclude": true
+      },
+      "reason_he": "משקל הדמוי חורג ממשקל ההטלה המרבי של החכה."
+    },
+    {
+      "id": "HARD_BELOW_02",
+      "enabled": true,
+      "priority": 95,
+      "when": {
+        "candidate_weight_below_rod_min_materially": true
+      },
+      "candidate": "heavy_minnow",
+      "effect": {
+        "score_delta": 0,
+        "exclude": true
+      },
+      "reason_he": "משקל הדמוי נמוך משמעותית מטווח העבודה של החכה."
+    },
+    {
+      "id": "HARD_WEIGHT_03",
+      "enabled": true,
+      "priority": 100,
+      "when": {
+        "candidate_weight_above_rod_max": true
+      },
+      "candidate": "popper",
+      "effect": {
+        "score_delta": 0,
+        "exclude": true
+      },
+      "reason_he": "משקל הדמוי חורג ממשקל ההטלה המרבי של החכה."
+    },
+    {
+      "id": "HARD_BELOW_03",
+      "enabled": true,
+      "priority": 95,
+      "when": {
+        "candidate_weight_below_rod_min_materially": true
+      },
+      "candidate": "popper",
+      "effect": {
+        "score_delta": 0,
+        "exclude": true
+      },
+      "reason_he": "משקל הדמוי נמוך משמעותית מטווח העבודה של החכה."
+    },
+    {
+      "id": "HARD_WEIGHT_04",
+      "enabled": true,
+      "priority": 100,
+      "when": {
+        "candidate_weight_above_rod_max": true
+      },
+      "candidate": "pencil",
+      "effect": {
+        "score_delta": 0,
+        "exclude": true
+      },
+      "reason_he": "משקל הדמוי חורג ממשקל ההטלה המרבי של החכה."
+    },
+    {
+      "id": "HARD_BELOW_04",
+      "enabled": true,
+      "priority": 95,
+      "when": {
+        "candidate_weight_below_rod_min_materially": true
+      },
+      "candidate": "pencil",
+      "effect": {
+        "score_delta": 0,
+        "exclude": true
+      },
+      "reason_he": "משקל הדמוי נמוך משמעותית מטווח העבודה של החכה."
+    },
+    {
+      "id": "HARD_WEIGHT_05",
+      "enabled": true,
+      "priority": 100,
+      "when": {
+        "candidate_weight_above_rod_max": true
+      },
+      "candidate": "stickbait",
+      "effect": {
+        "score_delta": 0,
+        "exclude": true
+      },
+      "reason_he": "משקל הדמוי חורג ממשקל ההטלה המרבי של החכה."
+    },
+    {
+      "id": "HARD_BELOW_05",
+      "enabled": true,
+      "priority": 95,
+      "when": {
+        "candidate_weight_below_rod_min_materially": true
+      },
+      "candidate": "stickbait",
+      "effect": {
+        "score_delta": 0,
+        "exclude": true
+      },
+      "reason_he": "משקל הדמוי נמוך משמעותית מטווח העבודה של החכה."
+    },
+    {
+      "id": "HARD_WEIGHT_06",
+      "enabled": true,
+      "priority": 100,
+      "when": {
+        "candidate_weight_above_rod_max": true
+      },
+      "candidate": "metal_jig",
+      "effect": {
+        "score_delta": 0,
+        "exclude": true
+      },
+      "reason_he": "משקל הדמוי חורג ממשקל ההטלה המרבי של החכה."
+    },
+    {
+      "id": "HARD_BELOW_06",
+      "enabled": true,
+      "priority": 95,
+      "when": {
+        "candidate_weight_below_rod_min_materially": true
+      },
+      "candidate": "metal_jig",
+      "effect": {
+        "score_delta": 0,
+        "exclude": true
+      },
+      "reason_he": "משקל הדמוי נמוך משמעותית מטווח העבודה של החכה."
+    },
+    {
+      "id": "HARD_WEIGHT_07",
+      "enabled": true,
+      "priority": 100,
+      "when": {
+        "candidate_weight_above_rod_max": true
+      },
+      "candidate": "micro_jig",
+      "effect": {
+        "score_delta": 0,
+        "exclude": true
+      },
+      "reason_he": "משקל הדמוי חורג ממשקל ההטלה המרבי של החכה."
+    },
+    {
+      "id": "HARD_BELOW_07",
+      "enabled": true,
+      "priority": 95,
+      "when": {
+        "candidate_weight_below_rod_min_materially": true
+      },
+      "candidate": "micro_jig",
+      "effect": {
+        "score_delta": 0,
+        "exclude": true
+      },
+      "reason_he": "משקל הדמוי נמוך משמעותית מטווח העבודה של החכה."
+    },
+    {
+      "id": "HARD_WEIGHT_08",
+      "enabled": true,
+      "priority": 100,
+      "when": {
+        "candidate_weight_above_rod_max": true
+      },
+      "candidate": "soft_plastic",
+      "effect": {
+        "score_delta": 0,
+        "exclude": true
+      },
+      "reason_he": "משקל הדמוי חורג ממשקל ההטלה המרבי של החכה."
+    },
+    {
+      "id": "HARD_BELOW_08",
+      "enabled": true,
+      "priority": 95,
+      "when": {
+        "candidate_weight_below_rod_min_materially": true
+      },
+      "candidate": "soft_plastic",
+      "effect": {
+        "score_delta": 0,
+        "exclude": true
+      },
+      "reason_he": "משקל הדמוי נמוך משמעותית מטווח העבודה של החכה."
+    },
+    {
+      "id": "HARD_WEIGHT_09",
+      "enabled": true,
+      "priority": 100,
+      "when": {
+        "candidate_weight_above_rod_max": true
+      },
+      "candidate": "vibe",
+      "effect": {
+        "score_delta": 0,
+        "exclude": true
+      },
+      "reason_he": "משקל הדמוי חורג ממשקל ההטלה המרבי של החכה."
+    },
+    {
+      "id": "HARD_BELOW_09",
+      "enabled": true,
+      "priority": 95,
+      "when": {
+        "candidate_weight_below_rod_min_materially": true
+      },
+      "candidate": "vibe",
+      "effect": {
+        "score_delta": 0,
+        "exclude": true
+      },
+      "reason_he": "משקל הדמוי נמוך משמעותית מטווח העבודה של החכה."
+    },
+    {
+      "id": "HARD_WEIGHT_10",
+      "enabled": true,
+      "priority": 100,
+      "when": {
+        "candidate_weight_above_rod_max": true
+      },
+      "candidate": "blade",
+      "effect": {
+        "score_delta": 0,
+        "exclude": true
+      },
+      "reason_he": "משקל הדמוי חורג ממשקל ההטלה המרבי של החכה."
+    },
+    {
+      "id": "HARD_BELOW_10",
+      "enabled": true,
+      "priority": 95,
+      "when": {
+        "candidate_weight_below_rod_min_materially": true
+      },
+      "candidate": "blade",
+      "effect": {
+        "score_delta": 0,
+        "exclude": true
+      },
+      "reason_he": "משקל הדמוי נמוך משמעותית מטווח העבודה של החכה."
+    }
+  ]
+}

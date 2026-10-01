@@ -1,0 +1,141 @@
+{
+  "version": "1.0.0",
+  "locations": [
+    {
+      "id": "rosh_hanikra",
+      "name_he": "ראש הנקרה",
+      "structure_profile": "rocky_cliffs",
+      "coordinates": null,
+      "notes": "Seed profile only. Exact access, reserve boundaries, hazards and legality require runtime verification.",
+      "verified": false
+    },
+    {
+      "id": "achziv",
+      "name_he": "אכזיב",
+      "structure_profile": "reef_rocky",
+      "coordinates": null,
+      "notes": "Seed profile only. Exact access, reserve boundaries, hazards and legality require runtime verification.",
+      "verified": false
+    },
+    {
+      "id": "nahariya",
+      "name_he": "נהריה",
+      "structure_profile": "mixed",
+      "coordinates": null,
+      "notes": "Seed profile only. Exact access, reserve boundaries, hazards and legality require runtime verification.",
+      "verified": false
+    },
+    {
+      "id": "haifa",
+      "name_he": "חיפה",
+      "structure_profile": "mixed_breakwater",
+      "coordinates": null,
+      "notes": "Seed profile only. Exact access, reserve boundaries, hazards and legality require runtime verification.",
+      "verified": false
+    },
+    {
+      "id": "dor",
+      "name_he": "דור",
+      "structure_profile": "reef_mixed",
+      "coordinates": null,
+      "notes": "Seed profile only. Exact access, reserve boundaries, hazards and legality require runtime verification.",
+      "verified": false
+    },
+    {
+      "id": "caesarea",
+      "name_he": "קיסריה",
+      "structure_profile": "reef_rocky",
+      "coordinates": null,
+      "notes": "Seed profile only. Exact access, reserve boundaries, hazards and legality require runtime verification.",
+      "verified": false
+    },
+    {
+      "id": "hadera",
+      "name_he": "חדרה",
+      "structure_profile": "sandy_breakwater",
+      "coordinates": null,
+      "notes": "Seed profile only. Exact access, reserve boundaries, hazards and legality require runtime verification.",
+      "verified": false
+    },
+    {
+      "id": "beit_yanai",
+      "name_he": "בית ינאי",
+      "structure_profile": "sandy_mixed",
+      "coordinates": null,
+      "notes": "Seed profile only. Exact access, reserve boundaries, hazards and legality require runtime verification.",
+      "verified": false
+    },
+    {
+      "id": "netanya",
+      "name_he": "נתניה",
+      "structure_profile": "cliff_sandy",
+      "coordinates": null,
+      "notes": "Seed profile only. Exact access, reserve boundaries, hazards and legality require runtime verification.",
+      "verified": false
+    },
+    {
+      "id": "herzliya",
+      "name_he": "הרצליה",
+      "structure_profile": "sandy_breakwater",
+      "coordinates": null,
+      "notes": "Seed profile only. Exact access, reserve boundaries, hazards and legality require runtime verification.",
+      "verified": false
+    },
+    {
+      "id": "tel_aviv",
+      "name_he": "תל אביב",
+      "structure_profile": "sandy_breakwater",
+      "coordinates": null,
+      "notes": "Seed profile only. Exact access, reserve boundaries, hazards and legality require runtime verification.",
+      "verified": false
+    },
+    {
+      "id": "bat_yam",
+      "name_he": "בת ים",
+      "structure_profile": "mixed_breakwater",
+      "coordinates": null,
+      "notes": "Seed profile only. Exact access, reserve boundaries, hazards and legality require runtime verification.",
+      "verified": false
+    },
+    {
+      "id": "palmachim",
+      "name_he": "פלמחים",
+      "structure_profile": "sandy_mixed",
+      "coordinates": null,
+      "notes": "Seed profile only. Exact access, reserve boundaries, hazards and legality require runtime verification.",
+      "verified": false
+    },
+    {
+      "id": "ashdod",
+      "name_he": "אשדוד",
+      "structure_profile": "sandy_breakwater",
+      "coordinates": null,
+      "notes": "Seed profile only. Exact access, reserve boundaries, hazards and legality require runtime verification.",
+      "verified": false
+    },
+    {
+      "id": "nitzanim",
+      "name_he": "ניצנים",
+      "structure_profile": "sandy",
+      "coordinates": null,
+      "notes": "Seed profile only. Exact access, reserve boundaries, hazards and legality require runtime verification.",
+      "verified": false
+    },
+    {
+      "id": "ashkelon",
+      "name_he": "אשקלון",
+      "structure_profile": "sandy_breakwater",
+      "coordinates": null,
+      "notes": "Seed profile only. Exact access, reserve boundaries, hazards and legality require runtime verification.",
+      "verified": false
+    },
+    {
+      "id": "zikim",
+      "name_he": "זיקים",
+      "structure_profile": "sandy",
+      "coordinates": null,
+      "notes": "Seed profile only. Exact access, reserve boundaries, hazards and legality require runtime verification.",
+      "verified": false
+    }
+  ]
+}

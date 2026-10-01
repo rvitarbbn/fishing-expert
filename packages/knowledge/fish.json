@@ -1,0 +1,226 @@
+{
+  "version": "1.0.0",
+  "species": [
+    {
+      "id": "european_seabass",
+      "name_he": "לברק",
+      "name_en": "European seabass",
+      "preferred_lures": [
+        "minnow",
+        "soft_plastic",
+        "vibe"
+      ],
+      "active_times": [
+        "night",
+        "dawn",
+        "sunrise",
+        "sunset"
+      ],
+      "habitats": [
+        "foam_line",
+        "sandy",
+        "rock_edge",
+        "estuary"
+      ],
+      "seasonality_note": "Seed heuristic; validate locally and do not render as certainty.",
+      "legal_status": "runtime_check_required",
+      "confidence": "seed_expert_heuristic"
+    },
+    {
+      "id": "bluefish",
+      "name_he": "גומבר",
+      "name_en": "Bluefish",
+      "preferred_lures": [
+        "popper",
+        "pencil",
+        "metal_jig",
+        "minnow",
+        "vibe"
+      ],
+      "active_times": [
+        "dawn",
+        "sunrise",
+        "sunset"
+      ],
+      "habitats": [
+        "open_beach",
+        "breakwater",
+        "surface_feed"
+      ],
+      "seasonality_note": "Seed heuristic; validate locally and do not render as certainty.",
+      "legal_status": "runtime_check_required",
+      "confidence": "seed_expert_heuristic"
+    },
+    {
+      "id": "atlantic_bonito",
+      "name_he": "פלמידה",
+      "name_en": "Atlantic bonito",
+      "preferred_lures": [
+        "metal_jig",
+        "heavy_minnow",
+        "pencil"
+      ],
+      "active_times": [
+        "sunrise",
+        "morning",
+        "sunset"
+      ],
+      "habitats": [
+        "open_beach",
+        "breakwater",
+        "bait_school"
+      ],
+      "seasonality_note": "Seed heuristic; validate locally and do not render as certainty.",
+      "legal_status": "runtime_check_required",
+      "confidence": "seed_expert_heuristic"
+    },
+    {
+      "id": "greater_amberjack",
+      "name_he": "אינטיאס",
+      "name_en": "Greater amberjack",
+      "preferred_lures": [
+        "metal_jig",
+        "stickbait",
+        "popper"
+      ],
+      "active_times": [
+        "dawn",
+        "morning"
+      ],
+      "habitats": [
+        "deep_breakwater",
+        "reef_edge"
+      ],
+      "seasonality_note": "Seed heuristic; validate locally and do not render as certainty.",
+      "legal_status": "runtime_check_required",
+      "confidence": "seed_expert_heuristic"
+    },
+    {
+      "id": "grouper",
+      "name_he": "לוקוס",
+      "name_en": "Grouper",
+      "preferred_lures": [
+        "soft_plastic",
+        "metal_jig"
+      ],
+      "active_times": [
+        "dawn",
+        "sunset",
+        "night"
+      ],
+      "habitats": [
+        "reef",
+        "rocks",
+        "near_bottom"
+      ],
+      "seasonality_note": "Seed heuristic; validate locally and do not render as certainty.",
+      "legal_status": "runtime_check_required",
+      "confidence": "seed_expert_heuristic"
+    },
+    {
+      "id": "meagre",
+      "name_he": "מוסר",
+      "name_en": "Meagre",
+      "preferred_lures": [
+        "soft_plastic",
+        "minnow"
+      ],
+      "active_times": [
+        "sunset",
+        "night",
+        "dawn"
+      ],
+      "habitats": [
+        "sandy",
+        "estuary",
+        "near_bottom"
+      ],
+      "seasonality_note": "Seed heuristic; validate locally and do not render as certainty.",
+      "legal_status": "runtime_check_required",
+      "confidence": "seed_expert_heuristic"
+    },
+    {
+      "id": "leerfish",
+      "name_he": "טרכון",
+      "name_en": "Leerfish",
+      "preferred_lures": [
+        "minnow",
+        "metal_jig",
+        "pencil"
+      ],
+      "active_times": [
+        "dawn",
+        "sunrise",
+        "sunset"
+      ],
+      "habitats": [
+        "open_beach",
+        "bait_school"
+      ],
+      "seasonality_note": "Seed heuristic; validate locally and do not render as certainty.",
+      "legal_status": "runtime_check_required",
+      "confidence": "seed_expert_heuristic"
+    },
+    {
+      "id": "barracuda",
+      "name_he": "ברקודה",
+      "name_en": "Barracuda",
+      "preferred_lures": [
+        "minnow",
+        "pencil",
+        "metal_jig"
+      ],
+      "active_times": [
+        "dawn",
+        "sunset",
+        "night"
+      ],
+      "habitats": [
+        "reef_edge",
+        "breakwater"
+      ],
+      "seasonality_note": "Seed heuristic; validate locally and do not render as certainty.",
+      "legal_status": "runtime_check_required",
+      "confidence": "seed_expert_heuristic"
+    },
+    {
+      "id": "little_tunny",
+      "name_he": "טונית",
+      "name_en": "Little tunny",
+      "preferred_lures": [
+        "metal_jig",
+        "heavy_minnow"
+      ],
+      "active_times": [
+        "sunrise",
+        "morning"
+      ],
+      "habitats": [
+        "open_water",
+        "bait_school"
+      ],
+      "seasonality_note": "Seed heuristic; validate locally and do not render as certainty.",
+      "legal_status": "runtime_check_required",
+      "confidence": "seed_expert_heuristic"
+    },
+    {
+      "id": "unknown",
+      "name_he": "לא ידוע",
+      "name_en": "Unknown",
+      "preferred_lures": [
+        "metal_jig",
+        "minnow",
+        "soft_plastic"
+      ],
+      "active_times": [
+        "any"
+      ],
+      "habitats": [
+        "any"
+      ],
+      "seasonality_note": "Seed heuristic; validate locally and do not render as certainty.",
+      "legal_status": "runtime_check_required",
+      "confidence": "seed_expert_heuristic"
+    }
+  ]
+}

@@ -1,0 +1,54 @@
+{
+  "version": "1.0.0",
+  "rows": [
+    {
+      "condition": "flat",
+      "first": "minnow",
+      "second": "popper",
+      "third": "soft_plastic"
+    },
+    {
+      "condition": "calm",
+      "first": "minnow",
+      "second": "metal_jig",
+      "third": "vibe"
+    },
+    {
+      "condition": "moderate",
+      "first": "metal_jig",
+      "second": "soft_plastic",
+      "third": "vibe"
+    },
+    {
+      "condition": "working_foam",
+      "first": "minnow",
+      "second": "soft_plastic",
+      "third": "vibe"
+    },
+    {
+      "condition": "rough",
+      "first": "metal_jig",
+      "second": "soft_plastic",
+      "third": "vibe"
+    },
+    {
+      "condition": "murky",
+      "first": "vibe",
+      "second": "soft_plastic",
+      "third": "metal_jig"
+    },
+    {
+      "condition": "strong_wind",
+      "first": "metal_jig",
+      "second": "vibe",
+      "third": "heavy_minnow"
+    },
+    {
+      "condition": "strong_current",
+      "first": "metal_jig",
+      "second": "soft_plastic",
+      "third": "vibe"
+    }
+  ],
+  "warning": "Heuristic order only; fish, equipment and safety rules override."
+}
