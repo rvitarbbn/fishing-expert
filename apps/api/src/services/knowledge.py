@@ -185,29 +185,80 @@ class KnowledgeBase:
         """Get the starting score for candidates."""
         return self._scoring_start
 
+    def seed_status(self) -> dict[str, Any]:
+        """Return a summary of loaded seed data for diagnostics."""
+        return {
+            "fish_count": len(self.fish),
+            "lure_count": len(self.lures),
+            "seed_rule_count": len(self._seed_rules),
+            "db_rule_count": len(self._db_rules),
+            "total_rule_count": len(self.get_all_rules()),
+            "color_count": len(self.colors),
+            "retrieve_count": len(self.retrieves),
+            "location_count": len(self.locations),
+            "equipment_class_count": len(self.equipment_classes),
+            "sea_condition_row_count": len(self.sea_condition_matrix),
+            "rules_version": self.rules_version,
+            "knowledge_version": self.knowledge_version,
+            "loaded": len(self.fish) > 0 and len(self.lures) > 0,
+        }
+
+
+def _find_knowledge_dir() -> Path | None:
+    """Locate ``packages/knowledge/`` by walking up from this file.
+
+    The previous implementation used a hard-coded chain of ``.parent``
+    calls that broke whenever the working directory or install layout
+    changed.  This version walks up from the source file until it
+    finds a directory that contains ``packages/knowledge/fish.json``,
+    which is the canonical marker for the seed-data directory.
+    """
+    # 1. Walk upward from this source file (works in dev & editable install)
+    anchor = Path(__file__).resolve().parent
+    for _ in range(8):  # cap depth to avoid scanning the entire filesystem
+        candidate = anchor / "packages" / "knowledge"
+        if (candidate / "fish.json").is_file():
+            return candidate
+        if anchor == anchor.parent:
+            break  # filesystem root
+        anchor = anchor.parent
+
+    # 2. Docker / container convention
+    docker_path = Path("/app/packages/knowledge")
+    if (docker_path / "fish.json").is_file():
+        return docker_path
+
+    # 3. CWD-relative (covers `uvicorn --app-dir` and plain `python -m`)
+    cwd_path = Path.cwd() / "packages" / "knowledge"
+    if (cwd_path / "fish.json").is_file():
+        return cwd_path
+
+    return None
+
 
 async def load_knowledge() -> None:
     """Load knowledge base from seed files, then overlay DB-published rules."""
     global _knowledge_base
-    
+
     _knowledge_base = KnowledgeBase()
-    
-    # Try multiple possible locations for knowledge files
-    possible_paths = [
-        Path(__file__).parent.parent.parent.parent / "packages" / "knowledge",
-        Path("/app/packages/knowledge"),
-        Path("packages/knowledge"),
-    ]
-    
-    for path in possible_paths:
-        if path.exists():
-            _knowledge_base.load_from_directory(path)
-            break
+
+    knowledge_dir = _find_knowledge_dir()
+    if knowledge_dir is not None:
+        _knowledge_base.load_from_directory(knowledge_dir)
     else:
-        logger.warning("No knowledge directory found, using empty knowledge base")
+        logger.warning(
+            "No knowledge directory found — seed data will be empty. "
+            "Make sure packages/knowledge/ exists relative to the project root."
+        )
 
     # Load published rules from DB (best-effort at startup)
     await reload_db_rules()
+
+    status = _knowledge_base.seed_status()
+    if status["loaded"]:
+        logger.info("Knowledge base ready: %s", status)
+    else:
+        logger.error("Knowledge base is EMPTY — recommendations will fail")
 
 
 async def reload_db_rules() -> None:

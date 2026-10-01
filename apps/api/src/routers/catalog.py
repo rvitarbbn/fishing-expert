@@ -114,3 +114,15 @@ async def list_locations() -> list[dict]:
         }
         for loc_id, data in location_data.items()
     ]
+
+
+@router.get("/seed-status")
+async def seed_status() -> dict:
+    """
+    Diagnostic endpoint — shows how much seed data is loaded.
+
+    Returns counts for every knowledge-base section and a boolean
+    ``loaded`` flag that is ``true`` when fish + lures are present.
+    """
+    kb = get_knowledge_base()
+    return kb.seed_status()
